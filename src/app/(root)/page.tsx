@@ -1,18 +1,19 @@
-import { ContainerWrapper } from "@/components/container";
+import { ContainerWrapper } from "@/components/container"
+import { ProfileHeader } from "@/components/profile-header"
 
 const Page = () => {
   return (
     <>
-      <ContainerWrapper className="h-[250px]">
-        <h1>UdayKiran</h1>
+      <ContainerWrapper className="">
+        <ProfileHeader />
       </ContainerWrapper>
       <Line />
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
 
 function Line() {
-  return <div className="w-screen h-px bg-edge" />;
+  return <div className="bg-edge h-px w-screen" />
 }

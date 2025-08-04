@@ -1,11 +1,11 @@
-import { ContainerWrapper } from "../container";
+import { ContainerWrapper } from "../container"
 
 export const SiteHeader = () => {
   return (
-    <header className="h-12 w-full border-b-[1px] border-edge bg-background">
+    <header className="border-edge bg-background h-12 w-full border-b-[1px]">
       <ContainerWrapper className={""}>
-        <nav className="flex items-center h-full">UDAYKIRAN</nav>
+        <nav className="flex h-full items-center">UDAYKIRAN</nav>
       </ContainerWrapper>
     </header>
-  );
-};
+  )
+}

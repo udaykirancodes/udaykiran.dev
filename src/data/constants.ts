@@ -3,4 +3,4 @@ export const USER = {
   email: "officialudaykiran@gmail.com",
   displayName: "Uday Kiran",
   avatar: "/uday.jpeg",
-};
+}
