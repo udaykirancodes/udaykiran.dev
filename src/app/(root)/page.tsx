@@ -1,5 +1,6 @@
-import { ProfileHeader } from "@/components/portfolio/profile-header"
-import { Separator } from "@/components/portfolio/separator"
+import { ProfileHeader } from "@/components/profile/profile-header"
+import { ProfileInfo } from "@/components/profile/profile-info"
+import { Separator } from "@/components/profile/separator"
 import { ContainerWrapper } from "@/components/site/container"
 
 const Page = () => {
@@ -9,7 +10,7 @@ const Page = () => {
         <ProfileHeader />
         <Separator />
 
-        <ProfileHeader />
+        <ProfileInfo />
         <Separator />
       </ContainerWrapper>
     </>
