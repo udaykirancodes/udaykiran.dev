@@ -1,19 +1,19 @@
-import { ContainerWrapper } from "@/components/container"
-import { ProfileHeader } from "@/components/profile-header"
+import { ProfileHeader } from "@/components/portfolio/profile-header"
+import { Separator } from "@/components/portfolio/separator"
+import { ContainerWrapper } from "@/components/site/container"
 
 const Page = () => {
   return (
     <>
       <ContainerWrapper className="">
         <ProfileHeader />
+        <Separator />
+
+        <ProfileHeader />
+        <Separator />
       </ContainerWrapper>
-      <Line />
     </>
   )
 }
 
 export default Page
-
-function Line() {
-  return <div className="bg-edge h-px w-screen" />
-}
