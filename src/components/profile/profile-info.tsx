@@ -1,6 +1,10 @@
-import { USER } from "@/data/constants"
-import { Code2Icon, Mail, MapPin } from "lucide-react"
+import { ArrowUpRight, Code2Icon, Mail, MapPin } from "lucide-react"
+
 import { Button } from "../ui/button"
+
+import { USER } from "@/data/constants"
+import Image from "next/image"
+import React from "react"
 
 type ProfileInfoProps = {
   icon: React.ReactNode
@@ -43,13 +47,48 @@ const PROFILE_INFO: ProfileInfoProps[] = [
 
 export const ProfileInfo = () => {
   return (
-    <section className="w-full p-2">
-      <div className="flex flex-col items-center gap-x-2 gap-y-3">
+    <section className="w-full">
+      <div className="flex flex-col items-center gap-x-2 gap-y-3 p-2">
         {PROFILE_INFO.map((item, index) => {
           return <Item key={index} {...item} />
         })}
       </div>
-      <div></div>
+      <div className="my-2 grid grid-cols-1 gap-4 p-2 sm:grid-cols-3">
+        {USER.socials.map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            target="_blank"
+            className="border-edge group relative flex cursor-pointer flex-row rounded-sm border-[1px] border-dashed"
+          >
+            <div
+              key={item.name}
+              className="flex w-full items-center gap-x-2 p-2"
+            >
+              <div className="flex h-full items-center justify-center overflow-hidden">
+                <Image
+                  src={item.icon}
+                  alt={item.name}
+                  width={24}
+                  height={24}
+                  fetchPriority="high"
+                  className="h-8 w-8 rounded-sm"
+                />
+              </div>
+              <div className="border-edge h-[80%] border-r-[1px] border-dashed" />
+              <div className="flex-1">
+                <h3 className="text-primary text-[14px] font-medium">
+                  {item.name}
+                </h3>
+                <p className="text-muted-foreground text-sm">{item.username}</p>
+              </div>
+              <div className="opacity-0 transition-all delay-50 group-hover:opacity-100">
+                <ArrowUpRight className="text-primary h-4 w-4 text-xl" />
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
     </section>
   )
 }
