@@ -7,7 +7,7 @@ export const About = () => {
       <HeaderTitle title="About" />
       <div className="space-y-2 p-2">
         <h3 className="text-primary/90 text-base">
-          I'm Udaykiran, a Software Developer at{" "}
+          I&apos;m Udaykiran, a Software Developer at{" "}
           <Button className="h-0 cursor-pointer p-0 underline" variant="link">
             HexaCluster
           </Button>
@@ -19,7 +19,7 @@ export const About = () => {
           and Golang, focusing on microservices architecture.
         </h3>
         <h3 className="text-primary/90 text-base">
-          I've worked with{" "}
+          I&apos;ve worked with{" "}
           <Button className="h-0 cursor-pointer p-0 underline" variant="link">
             <a href="https://micro-frontends.org/">micro-frontends</a>
           </Button>{" "}
