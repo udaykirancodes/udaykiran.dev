@@ -24,7 +24,7 @@ export function ProfileHeader() {
         <h1 className="text-primary text-center text-2xl font-bold">
           {USER.displayName}
         </h1>
-        <p className="text-muted-foreground">SDE @ HexaCluster</p>
+        <h2 className="text-muted-foreground">SDE @ HexaCluster</h2>
       </div>
     </div>
   )

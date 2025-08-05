@@ -13,6 +13,7 @@ export const ContainerWrapper = ({
         "mx-2",
         "mx-auto h-full max-w-4xl",
         "border-edge border-x-[1px]",
+        "mx-2 sm:mx-auto",
         className
       )}
     >

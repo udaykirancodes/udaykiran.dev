@@ -15,8 +15,8 @@ const PROFILE_INFO: ProfileInfoProps[] = [
   {
     icon: <Code2Icon className="text-primary h-4 w-4 text-xl" />,
     content: (
-      <div className="text-primary/90 font-mono">
-        SDE at{" "}
+      <div className="">
+        <span className="text-primary/90 p-0 font-mono text-sm">SDE at </span>
         <Button asChild variant={"link"} className="p-0 font-mono text-sm">
           <a target="_blanket" href="https://hexacluter.ai">
             @HexaCluster
@@ -38,8 +38,10 @@ const PROFILE_INFO: ProfileInfoProps[] = [
   {
     icon: <MapPin className="text-primary h-4 w-4 text-xl" />,
     content: (
-      <div className="text-primary/90 font-mono text-sm">
-        Medak,Hyderabad,Telangana,India
+      <div>
+        <p className="text-primary/90 p-0 font-mono text-sm">
+          Medak,Hyderabad,Telangana,India
+        </p>
       </div>
     ),
   },
@@ -47,13 +49,13 @@ const PROFILE_INFO: ProfileInfoProps[] = [
 
 export const ProfileInfo = () => {
   return (
-    <section className="w-full">
-      <div className="flex flex-col items-center gap-x-2 gap-y-3 p-2">
+    <section className="w-full p-2">
+      <div className="grid grid-rows-3">
         {PROFILE_INFO.map((item, index) => {
-          return <Item key={index} {...item} />
+          return <SocialItem key={index} {...item} />
         })}
       </div>
-      <div className="my-2 grid grid-cols-1 gap-4 p-2 sm:grid-cols-3">
+      <div className="my-2 grid grid-cols-1 gap-4 sm:grid-cols-3">
         {USER.socials.map((item) => (
           <a
             key={item.name}
@@ -69,8 +71,10 @@ export const ProfileInfo = () => {
                 <Image
                   src={item.icon}
                   alt={item.name}
-                  width={24}
-                  height={24}
+                  width={48}
+                  height={48}
+                  quality={100}
+                  unoptimized
                   fetchPriority="high"
                   className="h-8 w-8 rounded-sm"
                 />
@@ -93,7 +97,7 @@ export const ProfileInfo = () => {
   )
 }
 
-const Item = ({ icon, content }: ProfileInfoProps) => {
+const SocialItem = ({ icon, content }: ProfileInfoProps) => {
   return (
     <div className="flex w-full items-center gap-x-2">
       <div className="bg-accent flex size-7 items-center justify-center rounded-md">
