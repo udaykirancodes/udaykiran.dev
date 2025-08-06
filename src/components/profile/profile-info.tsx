@@ -2,7 +2,7 @@ import { ArrowUpRight, Code2Icon, Mail, MapPin } from "lucide-react"
 
 import { Button } from "../ui/button"
 
-import { USER } from "@/data/constants"
+import { USER } from "@/data/user"
 import Image from "next/image"
 import React from "react"
 
@@ -18,7 +18,7 @@ const PROFILE_INFO: ProfileInfoProps[] = [
       <div className="">
         <span className="text-primary/90 p-0 font-mono text-sm">SDE at </span>
         <Button asChild variant={"link"} className="p-0 font-mono text-sm">
-          <a target="_blanket" href="https://hexacluter.ai">
+          <a target="_blanket" href="https://hexacluster.ai">
             @HexaCluster
           </a>
         </Button>
@@ -52,52 +52,45 @@ export const ProfileInfo = () => {
     <section className="w-full p-2">
       <div className="grid grid-rows-3">
         {PROFILE_INFO.map((item, index) => {
-          return <SocialItem key={index} {...item} />
+          return <Item key={index} {...item} />
         })}
       </div>
-      <div className="my-2 grid grid-cols-1 gap-4 sm:grid-cols-3">
+
+      {/* DESKTOP */}
+      <div className="my-2 hidden grid-cols-1 gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3">
         {USER.socials.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            target="_blank"
-            className="border-edge group relative flex cursor-pointer flex-row rounded-sm border-[1px] border-dashed"
-          >
-            <div
-              key={item.name}
-              className="flex w-full items-center gap-x-2 p-2"
-            >
-              <div className="flex h-full items-center justify-center overflow-hidden">
-                <Image
-                  src={item.icon}
-                  alt={item.name}
-                  width={48}
-                  height={48}
-                  quality={100}
-                  unoptimized
-                  fetchPriority="high"
-                  className="h-8 w-8 rounded-sm"
-                />
-              </div>
-              <div className="border-edge h-[80%] border-r-[1px] border-dashed" />
-              <div className="flex-1">
-                <h3 className="text-primary text-[14px] font-medium">
-                  {item.name}
-                </h3>
-                <p className="text-muted-foreground text-sm">{item.username}</p>
-              </div>
-              <div className="opacity-0 transition-all delay-50 group-hover:opacity-100">
-                <ArrowUpRight className="text-primary h-4 w-4 text-xl" />
-              </div>
-            </div>
-          </a>
+          <SocialItem key={item.name} {...item} />
         ))}
+      </div>
+      {/* MOBILE */}
+      <div className="border-edge group relative mt-2 grid cursor-pointer grid-cols-3 rounded-sm border-[1px] border-dashed py-2 sm:hidden">
+        {USER.socials.map((item, index) => {
+          return (
+            <a
+              key={item.name}
+              href={item.href}
+              target="_blank"
+              className="border-edge flex h-full items-center justify-center overflow-hidden border-dashed not-first:border-l-[1px]"
+            >
+              <Image
+                src={item.icon}
+                alt={item.name}
+                width={48}
+                height={48}
+                quality={100}
+                unoptimized
+                fetchPriority="high"
+                className="h-8 w-8 rounded-sm"
+              />
+            </a>
+          )
+        })}
       </div>
     </section>
   )
 }
 
-const SocialItem = ({ icon, content }: ProfileInfoProps) => {
+const Item = ({ icon, content }: ProfileInfoProps) => {
   return (
     <div className="flex w-full items-center gap-x-2">
       <div className="bg-accent flex size-7 items-center justify-center rounded-md">
@@ -105,5 +98,43 @@ const SocialItem = ({ icon, content }: ProfileInfoProps) => {
       </div>
       <div>{content}</div>
     </div>
+  )
+}
+
+const SocialItem = (item: (typeof USER.socials)[0]) => {
+  return (
+    <>
+      <a
+        key={item.name}
+        href={item.href}
+        target="_blank"
+        className="border-edge group relative flex cursor-pointer flex-row rounded-sm border-[1px] border-dashed"
+      >
+        <div key={item.name} className="flex w-full items-center gap-x-2 p-2">
+          <div className="flex h-full items-center justify-center overflow-hidden">
+            <Image
+              src={item.icon}
+              alt={item.name}
+              width={48}
+              height={48}
+              quality={100}
+              unoptimized
+              fetchPriority="high"
+              className="h-8 w-8 rounded-sm"
+            />
+          </div>
+          <div className="border-edge h-[80%] border-r-[1px] border-dashed" />
+          <div className="flex-1">
+            <h3 className="text-primary text-[14px] font-medium">
+              {item.name}
+            </h3>
+            <p className="text-muted-foreground text-sm">{item.username}</p>
+          </div>
+          <div className="opacity-0 transition-all delay-50 group-hover:opacity-100">
+            <ArrowUpRight className="text-primary h-4 w-4 text-xl" />
+          </div>
+        </div>
+      </a>
+    </>
   )
 }

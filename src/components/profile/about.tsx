@@ -9,7 +9,9 @@ export const About = () => {
         <h3 className="text-primary/90 text-base">
           I&apos;m Udaykiran, a Software Developer at{" "}
           <Button className="h-0 cursor-pointer p-0 underline" variant="link">
-            HexaCluster
+            <a href="https://hexacluster.ai/" target="_blanket">
+              HexaCluster
+            </a>
           </Button>
           , with 1+ years of experience building high-quality web applications
           using Next.js, React, and TypeScript.
