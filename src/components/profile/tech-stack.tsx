@@ -3,9 +3,7 @@ import Image from "next/image"
 import { Button } from "../ui/button"
 import { HeaderTitle } from "./header-title"
 
-type TechStackProps = {}
-
-export const TechStack: React.FC<TechStackProps> = () => {
+export const TechStack: React.FC = () => {
   return (
     <>
       <section className="w-full">

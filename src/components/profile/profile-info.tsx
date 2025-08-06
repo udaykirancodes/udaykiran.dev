@@ -64,7 +64,7 @@ export const ProfileInfo = () => {
       </div>
       {/* MOBILE */}
       <div className="border-edge group relative mt-2 grid cursor-pointer grid-cols-3 rounded-sm border-[1px] border-dashed py-2 sm:hidden">
-        {USER.socials.map((item, index) => {
+        {USER.socials.map((item) => {
           return (
             <a
               key={item.name}
