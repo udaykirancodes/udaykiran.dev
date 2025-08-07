@@ -8,7 +8,7 @@ export default function Layout({
   return (
     <>
       <SiteHeader />
-      <main className="max-w-screen overflow-x-hidden">{children}</main>
+      <main className="w-full">{children}</main>
     </>
   )
 }
