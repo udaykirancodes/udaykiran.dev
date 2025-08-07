@@ -12,11 +12,26 @@ export const TechStack: React.FC = () => {
     <>
       <section className="w-full">
         <HeaderTitle title="Tech Stack" />
-        <div className="grid w-full grid-cols-4 gap-2 p-2 lg:grid-cols-6">
+        <div className="my-2 grid w-full grid-cols-4 gap-2 p-2 lg:grid-cols-6">
           {TECH_STACK.map((item) => {
-            const url = `/assets/tech-stack/${item.key}${item.theme ? (theme === "dark" ? "-dark" : "-light") : ""}.svg`
+            const getThemeString = () => {
+              if (item.theme) {
+                if (theme === "dark") {
+                  return "-dark"
+                }
+                if (theme === "light") {
+                  return "-light"
+                }
+                return "-dark"
+              }
+              return ""
+            }
+            const url = `/assets/tech-stack/${item.key}${getThemeString()}.svg`
             return (
-              <div key={item.key} className="flex">
+              <div
+                key={item.key}
+                className="flex justify-start sm:justify-start"
+              >
                 <Image
                   src={url}
                   alt={item.title}
@@ -26,6 +41,7 @@ export const TechStack: React.FC = () => {
                   unoptimized
                   fetchPriority="high"
                   className="h-8 w-8 rounded-sm"
+                  suppressHydrationWarning={true}
                 />
                 <Button
                   variant={"link"}

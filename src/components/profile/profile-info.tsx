@@ -70,7 +70,7 @@ export const ProfileInfo = () => {
               key={item.name}
               href={item.href}
               target="_blank"
-              className="border-edge flex h-full items-center justify-center overflow-hidden border-dashed not-first:border-l-[1px]"
+              className="border-edge flex h-full items-center justify-center overflow-hidden border-dashed [&:not(:first-child)]:border-l-[1px]"
             >
               <Image
                 src={item.icon}
