@@ -23,11 +23,15 @@ export const About = () => {
         <h3 className="text-primary/90 text-base">
           I&apos;ve worked with{" "}
           <Button className="h-0 cursor-pointer p-0 underline" variant="link">
-            <a href="https://micro-frontends.org/">micro-frontends</a>
+            <a href="https://micro-frontends.org/" className="text-base">
+              micro-frontends
+            </a>
           </Button>{" "}
           and{" "}
           <Button className="h-0 cursor-pointer p-0 underline" variant="link">
-            <a href="https://microservices.io/">microservices</a>
+            <a href="https://microservices.io/" className="text-base">
+              microservices
+            </a>
           </Button>
           , building modular, scalable applications end-to-end.
         </h3>

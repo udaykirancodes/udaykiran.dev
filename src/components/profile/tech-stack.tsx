@@ -28,10 +28,7 @@ export const TechStack: React.FC = () => {
             }
             const url = `/assets/tech-stack/${item.key}${getThemeString()}.svg`
             return (
-              <div
-                key={item.key}
-                className="flex justify-start sm:justify-start"
-              >
+              <div key={item.key} className="flex flex-col sm:flex-row">
                 <Image
                   src={url}
                   alt={item.title}

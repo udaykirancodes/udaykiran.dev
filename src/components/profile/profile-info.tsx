@@ -13,11 +13,11 @@ type ProfileInfoProps = {
 
 const PROFILE_INFO: ProfileInfoProps[] = [
   {
-    icon: <Code2Icon className="text-primary h-4 w-4 text-xl" />,
+    icon: <Code2Icon className="text-primary h-4 w-4" />,
     content: (
-      <div className="">
-        <span className="text-primary/90 p-0 font-mono text-sm">SDE at </span>
-        <Button asChild variant={"link"} className="p-0 font-mono text-sm">
+      <div className="text-xs">
+        <span className="text-primary/90 p-0 font-mono">SDE at </span>
+        <Button asChild variant={"link"} className="p-0 font-mono text-xs">
           <a target="_blanket" href="https://hexacluster.ai">
             @HexaCluster
           </a>
@@ -26,20 +26,20 @@ const PROFILE_INFO: ProfileInfoProps[] = [
     ),
   },
   {
-    icon: <Mail className="text-primary h-4 w-4 text-xl" />,
+    icon: <Mail className="text-primary h-4 w-4" />,
     content: (
-      <div className="text-primary/90">
-        <Button asChild variant={"link"} className="p-0 font-mono text-sm">
+      <div className="text-primary/90 text-xs">
+        <Button asChild variant={"link"} className="p-0 font-mono text-xs">
           <a href={`mailto:${USER.email}`}>{USER.email}</a>
         </Button>
       </div>
     ),
   },
   {
-    icon: <MapPin className="text-primary h-4 w-4 text-xl" />,
+    icon: <MapPin className="text-primary h-4 w-4" />,
     content: (
       <div>
-        <p className="text-primary/90 p-0 font-mono text-sm">
+        <p className="text-primary/90 p-0 font-mono text-xs">
           Medak,Hyderabad,Telangana,India
         </p>
       </div>
