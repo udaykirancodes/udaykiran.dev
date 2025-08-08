@@ -15,9 +15,9 @@ const PROFILE_INFO: ProfileInfoProps[] = [
   {
     icon: <Code2Icon className="text-primary h-4 w-4" />,
     content: (
-      <div className="text-xs">
+      <div className="text-[14px]">
         <span className="text-primary/90 p-0 font-mono">SDE at </span>
-        <Button asChild variant={"link"} className="p-0 font-mono text-xs">
+        <Button asChild variant={"link"} className="p-0 font-mono text-[14px]">
           <a target="_blanket" href="https://hexacluster.ai">
             @HexaCluster
           </a>
@@ -28,8 +28,8 @@ const PROFILE_INFO: ProfileInfoProps[] = [
   {
     icon: <Mail className="text-primary h-4 w-4" />,
     content: (
-      <div className="text-primary/90 text-xs">
-        <Button asChild variant={"link"} className="p-0 font-mono text-xs">
+      <div className="text-primary/90 text-[14px]">
+        <Button asChild variant={"link"} className="p-0 font-mono text-[14px]">
           <a href={`mailto:${USER.email}`}>{USER.email}</a>
         </Button>
       </div>
@@ -39,7 +39,7 @@ const PROFILE_INFO: ProfileInfoProps[] = [
     icon: <MapPin className="text-primary h-4 w-4" />,
     content: (
       <div>
-        <p className="text-primary/90 p-0 font-mono text-xs">
+        <p className="text-primary/90 p-0 font-mono text-[14px]">
           Medak,Hyderabad,Telangana,India
         </p>
       </div>

@@ -9,7 +9,7 @@ export default function Layout({
   return (
     <>
       <SiteHeader />
-      <main className="w-full">{children}</main>
+      <main className="w-full overflow-x-hidden">{children}</main>
       <SiteFooter />
     </>
   )
