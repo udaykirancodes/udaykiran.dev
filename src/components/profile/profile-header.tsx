@@ -15,14 +15,14 @@ export function ProfileHeader() {
       <div className="z-50 flex flex-col items-center justify-center gap-y-1">
         <Image
           src={USER.avatar}
-          alt={`${USER.displayName}'s avatar`}
+          alt={`${USER.name}'s avatar`}
           width={300}
           height={300}
           fetchPriority="high"
           className="ring-border ring-offset-edge h-32 w-32 rounded-full ring-1 ring-offset-2 select-none"
         />
         <h1 className="text-primary text-center text-2xl font-bold">
-          {USER.displayName}
+          {USER.name}
         </h1>
         <h2 className="text-muted-foreground">SDE @ HexaCluster</h2>
       </div>

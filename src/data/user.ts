@@ -1,7 +1,7 @@
 export const USER = {
   name: "Uday Kiran",
+  description: "",
   email: "udaykiranbandarugalla@gmail.com",
-  displayName: "Uday Kiran",
   avatar: "/assets/uday.jpeg",
   socials: [
     {

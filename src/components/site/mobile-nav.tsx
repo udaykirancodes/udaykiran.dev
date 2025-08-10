@@ -9,11 +9,12 @@ import {
 } from "@/components/ui/drawer"
 import { NAV_ITEMS } from "@/data/nav-items"
 import { USER } from "@/data/user"
+import { cn } from "@/lib/utils"
 
 import { AlignJustifyIcon } from "lucide-react"
 import Link from "next/link"
 
-const MobileNavbar = () => {
+const MobileNavbar = ({ activeUrl }: { activeUrl: string }) => {
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -34,9 +35,15 @@ const MobileNavbar = () => {
                 <DrawerClose asChild className="flex flex-col items-start">
                   <Link
                     prefetch={false}
-                    className="text-primary text-base font-medium"
                     key={index}
                     href={item.href}
+                    className={cn(
+                      "text-sm",
+                      "text-base font-medium",
+                      activeUrl === item.href
+                        ? "text-primary"
+                        : "text-muted-foreground"
+                    )}
                   >
                     <li>{item.name}</li>
                   </Link>
