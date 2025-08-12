@@ -1,6 +1,7 @@
 import { About } from "@/components/profile/about"
 import { ProfileHeader } from "@/components/profile/profile-header"
 import { ProfileInfo } from "@/components/profile/profile-info"
+import { Projects } from "@/components/profile/projects"
 import { Separator } from "@/components/profile/separator"
 import { TechStack } from "@/components/profile/tech-stack"
 import { ContainerWrapper } from "@/components/site/container"
@@ -19,6 +20,9 @@ const Page = () => {
         <Separator />
 
         <TechStack />
+        <Separator />
+
+        <Projects />
         <Separator />
       </ContainerWrapper>
     </>

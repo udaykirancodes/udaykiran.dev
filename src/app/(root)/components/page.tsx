@@ -21,7 +21,7 @@ const Page = () => {
           key={component.title}
           className="border-edge group flex items-center gap-x-2 border-b-[1px]"
         >
-          <div className="border-edge flex aspect-square h-full items-center justify-center border-r-[1px] p-2">
+          <div className="border-edge flex aspect-square h-full items-center justify-center border-r-[1px] px-4 py-2">
             <Image
               alt="Component Icon"
               width={24}
