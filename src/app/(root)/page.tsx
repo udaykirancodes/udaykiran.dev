@@ -1,4 +1,5 @@
 import { About } from "@/components/profile/about"
+import { Experience } from "@/components/profile/experience"
 import { ProfileHeader } from "@/components/profile/profile-header"
 import { ProfileInfo } from "@/components/profile/profile-info"
 import { Projects } from "@/components/profile/projects"
@@ -23,6 +24,9 @@ const Page = () => {
         <Separator />
 
         <Projects />
+        <Separator />
+
+        <Experience />
         <Separator />
       </ContainerWrapper>
     </>

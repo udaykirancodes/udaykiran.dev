@@ -1,9 +1,5 @@
-import {
-  ChevronsDownUpIcon,
-  ChevronsUpDownIcon,
-  GithubIcon,
-  LinkIcon,
-} from "lucide-react"
+import { ChevronsDownUpIcon, ChevronsUpDownIcon, Infinity } from "lucide-react"
+import moment from "moment"
 import Image from "next/image"
 
 import {
@@ -11,20 +7,19 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
-import { Project } from "@/data/projects"
+import { Experience } from "@/data/experience"
 import { cn } from "@/lib/utils"
 import { Badge } from "../ui/badge"
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
 
-export function ProjectItem({
+export function ExperienceItem({
   className,
-  project,
+  experience,
 }: {
   className?: string
-  project: Project
+  experience: Experience
 }) {
   return (
-    <Collapsible defaultOpen={project.isExpanded} asChild>
+    <Collapsible defaultOpen={experience.isExpanded} asChild>
       <div
         className={cn(
           className,
@@ -32,10 +27,10 @@ export function ProjectItem({
         )}
       >
         <div className="flex items-center">
-          {project.logo ? (
+          {experience.logo ? (
             <Image
-              src={project.logo}
-              alt={project.title}
+              src={experience.logo}
+              alt={experience.title}
               width={32}
               height={32}
               quality={100}
@@ -48,7 +43,7 @@ export function ProjectItem({
               className="mx-4 flex size-6 shrink-0 items-center justify-center"
               aria-hidden="true"
             >
-              {project.title.charAt(0)}
+              {experience.company.charAt(0)}
             </div>
           )}
 
@@ -60,46 +55,36 @@ export function ProjectItem({
               asChild
             >
               <div>
-                <div className="flex-1 items-center">
+                <div className="h-full flex-1 items-center">
                   <h3 className="text-primary/95 mb-1 text-sm leading-snug font-medium text-balance sm:text-base">
-                    {project.title}
+                    {experience.title}
                   </h3>
 
-                  <div className="hidden sm:block">
-                    <SkillBadgeList skills={project.skills} />
+                  <div className="flex h-full w-full flex-row items-center gap-x-2">
+                    <Badge variant={"outline"} className="text-xs">
+                      {experience.type}
+                    </Badge>
+                    <div className="border-edge border-l-[1px] pl-2">
+                      <div className="flex flex-row items-center space-x-2">
+                        <p className="text-muted-foreground text-xs">
+                          {moment(experience.from).format("MMM YYYY")}
+                        </p>
+                        <span className="text-muted-foreground text-xs">
+                          {"-"}
+                        </span>
+                        {experience.to ? (
+                          <p className="text-muted-foreground text-xs">
+                            {moment(experience.to).format("MMM YYYY")}
+                          </p>
+                        ) : (
+                          <span className="text-muted-foreground text-xs">
+                            <Infinity className="size-5 text-xs" />
+                          </span>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                <Tooltip>
-                  <TooltipTrigger>
-                    <a
-                      className="text-muted-foreground hover:text-foreground flex size-6 shrink-0 items-center justify-center"
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <LinkIcon className="pointer-events-none size-4" />
-                      <span className="sr-only">Open Project Link</span>
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent>Open Project Link</TooltipContent>
-                </Tooltip>
-
-                <Tooltip>
-                  <TooltipTrigger>
-                    <a
-                      className="text-muted-foreground hover:text-foreground flex size-6 shrink-0 items-center justify-center"
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <GithubIcon className="ring-muted-foreground pointer-events-none size-4" />
-                      <span className="sr-only">Open GitHub Link</span>
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent>Open GitHub Link</TooltipContent>
-                </Tooltip>
-
                 <div
                   className="text-muted-foreground shrink-0 [&_svg]:size-4"
                   aria-hidden
@@ -115,16 +100,18 @@ export function ProjectItem({
         <CollapsibleContent className="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down overflow-hidden duration-300">
           <div className="border-edge space-y-4 border-t border-dashed p-4">
             <div className="space-y-2">
-              <p className="text-sm">{project.description}</p>
-              {project.descriptionList.length > 0 && (
+              {experience.descriptionList.length > 0 && (
                 <ul className="flex list-disc flex-wrap gap-1.5 pl-5">
-                  {project.descriptionList.map((item, index) => (
+                  {experience.descriptionList.map((item, index) => (
                     <li key={index} className="text-muted-foreground">
                       <p className="text-primary text-sm">{item}</p>
                     </li>
                   ))}
                 </ul>
               )}
+            </div>
+            <div className="space-y-2">
+              <SkillBadgeList skills={experience.skills} />
             </div>
           </div>
         </CollapsibleContent>
