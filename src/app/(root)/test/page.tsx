@@ -1,13 +1,50 @@
 import { Code } from "@/components/code/code"
+import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
 import { ContainerWrapper } from "@/components/site/container"
 
-const code = `export default function page() {
-  return <>Test Page</>
-}`
+const code = `import { About } from "@/components/profile/about"
+import { Experience } from "@/components/profile/experience"
+import { ProfileHeader } from "@/components/profile/profile-header"
+import { ProfileInfo } from "@/components/profile/profile-info"
+import { Projects } from "@/components/profile/projects"
+import { Separator } from "@/components/profile/separator"
+import { TechStack } from "@/components/profile/tech-stack"
+import { ContainerWrapper } from "@/components/site/container"
+
+const Page = () => {
+  return (
+    <>
+      <ContainerWrapper className="">
+        <ProfileHeader />
+        <Separator />
+
+        <ProfileInfo />
+        <Separator />
+
+        <About />
+        <Separator />
+
+        <TechStack />
+        <Separator />
+
+        <Projects />
+        <Separator />
+
+        <Experience />
+        <Separator />
+      </ContainerWrapper>
+    </>
+  )
+}
+
+export default Page
+`
 export default function page() {
   return (
     <ContainerWrapper>
-      <Code code={code} />
+      <CodeCollapsibleWrapper>
+        <Code code={code} />
+      </CodeCollapsibleWrapper>
     </ContainerWrapper>
   )
 }
