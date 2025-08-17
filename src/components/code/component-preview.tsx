@@ -23,10 +23,6 @@ export function ComponentPreview({
 }: ComponentPreviewProps) {
   const [reTriggerKey, setReTriggerKey] = useState<number>(Date.now())
 
-  console.log(filePath)
-
-  //   const componentName = filePath?.split('/').pop()?.split('.').shift()
-
   const reTrigger = () => {
     setReTriggerKey(Date.now())
   }

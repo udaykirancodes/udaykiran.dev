@@ -1,20 +1,10 @@
 export const COMPONENTS = [
   {
-    title: "Button",
-    href: "/components/button",
+    title: "Command",
+    name: "command",
+    href: "/components/command",
+    path: "src/core/command/command.tsx",
     description:
-      "a simple button with multiple variations for various purpose!",
-  },
-  {
-    title: "Card",
-    href: "/components/button",
-    description:
-      "a simple button with multiple variations for various purpose!",
-  },
-  {
-    title: "Form",
-    href: "/components/button",
-    description:
-      "a simple button with multiple variations for various purpose!",
+      "Component that displays the install command options to the user",
   },
 ]

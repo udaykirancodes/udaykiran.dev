@@ -1,18 +1,28 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import fs from "node:fs"
 
-import { readFileSync } from "node:fs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { COMPONENTS } from "@/data/components"
 import { Code } from "./code"
 import { CodeCollapsibleWrapper } from "./code-wrapper"
+import { COMPONENT_MAP, getComponent } from "./component-map"
 import { ComponentPreview } from "./component-preview"
 
 type ComponentCodePreview = {
-  filePath: string
+  componentName: string
   hasReTrigger?: boolean
 }
 
-export function CodeTabs({ filePath, hasReTrigger }: ComponentCodePreview) {
-  const fileContent =
-    readFileSync(filePath.replace("@", "."), "utf8") || "code not found!"
+export async function CodeTabs({
+  componentName,
+  hasReTrigger,
+}: ComponentCodePreview) {
+  const component = COMPONENTS.find(
+    (component) => component.name === componentName
+  )
+  if (!component) return null
+  const fileContent = fs.readFileSync(component.path, "utf8")
+
+  const Component = getComponent(componentName as keyof typeof COMPONENT_MAP)
 
   return (
     <div className="not-prose relative z-0 flex items-center justify-between pt-2 pb-2">
@@ -23,11 +33,8 @@ export function CodeTabs({ filePath, hasReTrigger }: ComponentCodePreview) {
         </TabsList>
         <TabsContent value="preview">
           <ComponentPreview
-            component={
-              <>
-                <h1>Hello World</h1>
-              </>
-            }
+            component={<Component />}
+            hasReTrigger={hasReTrigger}
           ></ComponentPreview>
         </TabsContent>
         <TabsContent value="code" className="">
