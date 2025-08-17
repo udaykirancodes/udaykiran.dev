@@ -16,7 +16,10 @@ export function CodeCollapsibleWrapper({
 }: React.ComponentProps<typeof Collapsible>) {
   return (
     <Collapsible
-      className={cn("group/collapsible not-prose relative", className)}
+      className={cn(
+        "group/collapsible not-prose relative rounded-md",
+        className
+      )}
       {...props}
     >
       <CollapsibleTrigger asChild>

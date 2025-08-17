@@ -1,4 +1,5 @@
 import { Code } from "@/components/code/code"
+import { CodeTabs } from "@/components/code/code-tabs"
 import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
 import { Commands } from "@/components/code/commands"
 import { ContainerWrapper } from "@/components/site/container"
@@ -44,6 +45,8 @@ export default function page() {
   return (
     <ContainerWrapper className="">
       <div className="px-2">
+        <CodeTabs filePath="src/app/(root)/components/page.tsx" />
+
         <Commands commands={{ pnpm: "pnpm", yarn: "yarn", npm: "npm" }} />
         <CodeCollapsibleWrapper>
           <Code showLineNumbers={true} code={code} />
