@@ -1,3 +1,10 @@
+import Image from "next/image"
+import Link from "next/link"
+import React from "react"
+
+import { Code } from "@/components/code/code"
+import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
+import { Commands } from "@/components/code/commands"
 import {
   Accordion,
   AccordionContent,
@@ -10,9 +17,6 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
 import type { MDXComponents } from "mdx/types"
-import Image from "next/image"
-import Link from "next/link"
-import React from "react"
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -22,6 +26,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 }
 
 const customComponents = {
+  Code,
+  CodeCollapsibleWrapper,
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -30,6 +36,7 @@ const customComponents = {
   AlertTitle,
   AlertDescription,
   Button,
+  Commands,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(

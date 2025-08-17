@@ -5,7 +5,7 @@ export default function Layout({
 }>) {
   return (
     <>
-      <div className="px-2">{children}</div>
+      <div className="mt-0 flex min-h-screen flex-col px-2">{children}</div>
     </>
   )
 }

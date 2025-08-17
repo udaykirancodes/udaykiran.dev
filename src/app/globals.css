@@ -14,6 +14,13 @@
   }
 }
 
+/* Hide line numbers when parent wrapper has no-lines class */
+.no-lines .shiki {
+  .line::before {
+    @apply hidden;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

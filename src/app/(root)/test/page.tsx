@@ -1,5 +1,6 @@
 import { Code } from "@/components/code/code"
 import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
+import { Commands } from "@/components/code/commands"
 import { ContainerWrapper } from "@/components/site/container"
 
 const code = `import { About } from "@/components/profile/about"
@@ -41,10 +42,13 @@ export default Page
 `
 export default function page() {
   return (
-    <ContainerWrapper>
-      <CodeCollapsibleWrapper>
-        <Code code={code} />
-      </CodeCollapsibleWrapper>
+    <ContainerWrapper className="">
+      <div className="px-2">
+        <Commands commands={{ pnpm: "pnpm", yarn: "yarn", npm: "npm" }} />
+        <CodeCollapsibleWrapper>
+          <Code showLineNumbers={true} code={code} />
+        </CodeCollapsibleWrapper>
+      </div>
     </ContainerWrapper>
   )
 }

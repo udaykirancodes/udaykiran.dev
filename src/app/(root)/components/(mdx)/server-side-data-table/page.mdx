@@ -8,28 +8,10 @@ This is a list in markdown:
 - Two
 - Three
 
-```css title="globals.css" showLineNumbers {2}
-@import "tailwindcss";
-@plugin "@tailwindcss/typography";
-```
+<Commands commands={{ pnpm: "pnpm", yarn: "yarn", npm: "npm" }} />
 
-```ts title="~/.zshrc"
-import { SiteFooter } from "@/components/site/site-footer"
-import { SiteHeader } from "@/components/site/site-header"
+<Code showLineNumbers code={`console.log("Hello World")`} />
 
-export default function Layout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <>
-      <SiteHeader />
-      <main className="w-full overflow-x-hidden">{children}</main>
-      <SiteFooter />
-    </>
-  )
-}
-```
-
-Checkout my React component:
+<CodeCollapsibleWrapper>
+  <Code showLineNumbers code={`console.log("Hello World")`} />
+</CodeCollapsibleWrapper>
