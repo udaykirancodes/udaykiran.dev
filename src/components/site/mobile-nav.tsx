@@ -18,7 +18,7 @@ const MobileNavbar = ({ activeUrl }: { activeUrl: string }) => {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="default" size={"icon"} className="size-8">
+        <Button variant="default" size={"icon"} className="z-50 size-8">
           <AlignJustifyIcon className="text-primary-foreground h-4 w-4 cursor-pointer" />
         </Button>
       </DrawerTrigger>
@@ -29,7 +29,7 @@ const MobileNavbar = ({ activeUrl }: { activeUrl: string }) => {
               {USER.name}
             </DrawerTitle>
           </DrawerHeader>
-          <ul className="flex flex-col gap-3 px-4 pb-4">
+          <ul className="mb-20 flex flex-col gap-3 px-4 pb-4">
             {NAV_ITEMS.map((item, index) => (
               <div key={index} className="flex flex-col gap-y-2">
                 <DrawerClose asChild className="flex flex-col items-start">

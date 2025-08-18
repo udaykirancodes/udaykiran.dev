@@ -58,8 +58,8 @@ export const SiteHeader = () => {
           {/* Mobile Nav */}
           <div className="relative flex h-full w-full items-center gap-x-3 sm:hidden">
             <MobileNavbar activeUrl={activeUrl} />
-            {activeUrl !== "/" && (
-              <div className="absolute flex w-full items-center justify-center">
+            {/* {activeUrl !== "/" && (
+              <div className="absolute z-50 flex w-auto items-center justify-center">
                 <Button
                   variant="link"
                   size={"icon"}
@@ -68,7 +68,7 @@ export const SiteHeader = () => {
                   Home
                 </Button>
               </div>
-            )}
+            )} */}
           </div>
           <div className="sm:hidden">
             <ThemeSwitcher />
