@@ -26,7 +26,11 @@ const MobileNavbar = ({ activeUrl }: { activeUrl: string }) => {
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
             <DrawerTitle className="text-primary text-base font-bold">
-              {USER.name}
+              <DrawerClose asChild>
+                <Link href="/" className="hover:text-primary">
+                  {USER.name}
+                </Link>
+              </DrawerClose>
             </DrawerTitle>
           </DrawerHeader>
           <ul className="mb-20 flex flex-col gap-3 px-4 pb-4">
