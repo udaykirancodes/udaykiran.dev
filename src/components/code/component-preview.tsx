@@ -12,14 +12,12 @@ type ComponentPreviewProps = {
   component: React.ReactElement
   hasReTrigger?: boolean
   className?: string
-  filePath?: string
 }
 
 export function ComponentPreview({
   component,
   hasReTrigger = false,
   className,
-  filePath,
 }: ComponentPreviewProps) {
   const [reTriggerKey, setReTriggerKey] = useState<number>(Date.now())
 
