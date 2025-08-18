@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/(root)/components/*.tsx",
-    "src/app/(root)/components/*.mdx"
+    "src/app/(root)/components/*.mdx",
+    "src/app/(root)/components/(mdx)/command/page.mdx"
   ],
   "exclude": ["node_modules"]
 }

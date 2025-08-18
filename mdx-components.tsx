@@ -5,6 +5,8 @@ import React from "react"
 import { Code } from "@/components/code/code"
 import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
 import { Commands } from "@/components/code/commands"
+import { PreviewComponentWithCode } from "@/components/code/preview-and-code"
+import { PageHeaderTitle } from "@/components/site/page-header-title"
 import {
   Accordion,
   AccordionContent,
@@ -37,6 +39,8 @@ const customComponents = {
   AlertDescription,
   Button,
   Commands,
+  PreviewComponentWithCode,
+  PageHeaderTitle,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(

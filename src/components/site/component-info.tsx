@@ -1,0 +1,44 @@
+"use client"
+
+import { COMPONENTS } from "@/data/components"
+import { ArrowLeft } from "lucide-react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { Button } from "../ui/button"
+import { PageHeaderTitle } from "./page-header-title"
+
+export const BackButton = () => {
+  return (
+    <>
+      <Link
+        href={"/components"}
+        className="flex items-center justify-start gap-x-1 px-1"
+      >
+        <ArrowLeft className="text-primary/90 size-5" />
+        <div>
+          <div className="border-edge border-b-[1px] px-2 py-2">
+            <Button variant={"link"} className="mx-0 px-0 text-base">
+              Components
+            </Button>
+          </div>
+        </div>
+      </Link>
+    </>
+  )
+}
+export const ShowComponentInfo = () => {
+  const pathname = usePathname()
+
+  const componentName = pathname.split("/").pop()
+
+  const component = COMPONENTS.find(
+    (component) => component.name === componentName
+  )
+  if (!component) return null
+  return (
+    <PageHeaderTitle
+      title={component.title}
+      description={component.description}
+    />
+  )
+}
