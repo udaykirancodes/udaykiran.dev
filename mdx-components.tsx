@@ -3,6 +3,7 @@ import Link from "next/link"
 import React from "react"
 
 import { Code } from "@/components/code/code"
+import { CodeWithFilename } from "@/components/code/code-with-filename"
 import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
 import { Commands } from "@/components/code/commands"
 import { PreviewComponentWithCode } from "@/components/code/preview-and-code"
@@ -41,6 +42,7 @@ const customComponents = {
   Commands,
   PreviewComponentWithCode,
   PageHeaderTitle,
+  CodeWithFilename,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
