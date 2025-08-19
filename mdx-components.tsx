@@ -6,6 +6,7 @@ import { Code } from "@/components/code/code"
 import { CodeWithFilename } from "@/components/code/code-with-filename"
 import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
 import { Commands } from "@/components/code/commands"
+import { CopyFileName } from "@/components/code/copy-file-name"
 import { PreviewComponentWithCode } from "@/components/code/preview-and-code"
 import { PageHeaderTitle } from "@/components/site/page-header-title"
 import {
@@ -43,6 +44,7 @@ const customComponents = {
   PreviewComponentWithCode,
   PageHeaderTitle,
   CodeWithFilename,
+  CopyFileName,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(

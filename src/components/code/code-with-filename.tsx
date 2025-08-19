@@ -3,17 +3,17 @@ import { getFileContent } from "@/lib/file"
 import { CodeCollapsibleWrapper } from "./code-wrapper"
 
 type CodeWithFilenameProps = {
-  filename: string
+  fileName: string
   showLineNumbers?: boolean
   collapsible?: boolean
 }
 
 export const CodeWithFilename = ({
-  filename,
+  fileName,
   showLineNumbers = false,
   collapsible = false,
 }: CodeWithFilenameProps) => {
-  const code = getFileContent(filename)
+  const code = getFileContent(fileName)
 
   if (collapsible) {
     return (
