@@ -11,50 +11,19 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    title: "Project Name 1",
-    description:
-      "Project Description 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
+    title: "udaykiran.dev",
+    description: "A minimal responsive portfolio with component registry",
     logo: "/assets/tech-stack/react.svg",
     githubLink: "https://github.com/udaykirancodes/udaykiran.dev",
     liveLink: "https://udaykiran.dev",
     skills: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
     isExpanded: true,
     descriptionList: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "Clean & modern design",
+      "Light & Dark theme support",
+      "Component registry",
+      "Re-Usable components",
+      "Shadcn CLI supported",
     ],
-  },
-  {
-    title: "Project Name 2",
-    description:
-      "Project Description 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
-    logo: "/assets/tech-stack/react.svg",
-    githubLink: "https://github.com/udaykirancodes/udaykiran.dev",
-    skills: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-    isExpanded: true,
-    descriptionList: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    ],
-    liveLink: "https://udaykiran.dev",
-  },
-  {
-    title: "Project Name 3",
-    description:
-      "Project Description 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
-    logo: "/assets/tech-stack/react.svg",
-    githubLink: "https://github.com/udaykirancodes/udaykiran.dev",
-    skills: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-    isExpanded: true,
-    descriptionList: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    ],
-    liveLink: "https://udaykiran.dev",
   },
 ]

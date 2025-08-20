@@ -114,10 +114,10 @@ export function ProjectItem({
 
         <CollapsibleContent className="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down overflow-hidden duration-300">
           <div className="border-edge space-y-4 border-t border-dashed p-4">
-            <div className="space-y-2">
+            <div className="flex flex-col space-y-2">
               <p className="text-sm">{project.description}</p>
               {project.descriptionList.length > 0 && (
-                <ul className="flex list-disc flex-wrap gap-1.5 pl-5">
+                <ul className="flex w-full list-disc flex-col flex-wrap gap-1.5 space-x-3 pl-5">
                   {project.descriptionList.map((item, index) => (
                     <li key={index} className="text-muted-foreground">
                       <p className="text-primary text-sm">{item}</p>

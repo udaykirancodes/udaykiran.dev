@@ -26,7 +26,6 @@ export const SiteHeader = () => {
             </Link>
             <ul className="flex items-center gap-x-3">
               {NAV_ITEMS.map((item, index) => {
-                console.log(item.href, activeUrl)
                 return (
                   <li key={index}>
                     <Button
