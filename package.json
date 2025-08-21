@@ -9,7 +9,8 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "lint:fix": "eslint . --fix ",
-    "prepare": "husky"
+    "prepare": "husky",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
@@ -36,6 +37,7 @@
     "prettier-plugin-tailwindcss": "^0.6.14",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "shadcn": "2.9.3-canary.0",
     "tailwind-merge": "^3.3.1",
     "vaul": "^1.1.2"
   },

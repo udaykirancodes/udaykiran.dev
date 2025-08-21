@@ -8,6 +8,7 @@ import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
 import { Commands } from "@/components/code/commands"
 import { CopyFileName } from "@/components/code/copy-file-name"
 import { PreviewComponentWithCode } from "@/components/code/preview-and-code"
+import { Separator } from "@/components/profile/separator"
 import { PageHeaderTitle } from "@/components/site/page-header-title"
 import {
   Accordion,
@@ -45,10 +46,11 @@ const customComponents = {
   PageHeaderTitle,
   CodeWithFilename,
   CopyFileName,
+  Separator,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
-        "font-heading mt-2 scroll-m-20 text-4xl font-bold",
+        "font-heading my-2 scroll-m-20 text-2xl font-bold",
         className
       )}
       {...props}
@@ -57,7 +59,7 @@ const customComponents = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "font-heading mt-16 scroll-m-20 border-b pb-4 text-xl font-semibold tracking-tight first:mt-0",
+        "font-heading mt-2 scroll-m-20 border-b pb-4 text-xl font-semibold tracking-tight first:mt-0",
         className
       )}
       {...props}

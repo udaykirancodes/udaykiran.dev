@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "udaykiran.dev",
+  "homepage": "https://udaykiran.dev",
+  "items": [
+    {
+      "name": "command",
+      "type": "registry:component",
+      "title": "Command",
+      "description": "A switcher for package manager commands with one-click copy",
+      "registryDependencies": ["tooltip", "tabs", "separator"],
+      "files": [
+        {
+          "path": "src/core/command/command.tsx",
+          "type": "registry:component",
+          "target": "src/components/ui/command.tsx"
+        }
+      ]
+    }
+  ]
+}

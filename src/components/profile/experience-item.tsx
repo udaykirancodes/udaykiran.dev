@@ -68,14 +68,14 @@ export function ExperienceItem({
                   </h3>
 
                   <div className="flex h-full w-full flex-row items-center gap-x-2">
-                    <Badge variant={"outline"} className="text-xs">
-                      {experience.company}
-                    </Badge>
-                    <div className="border-edge border-l-[1px] pl-2">
+                    <div className="border-edge hidden border-r-[1px] pr-2 sm:block">
                       <Badge variant={"outline"} className="text-xs">
-                        {experience.type}
+                        {experience.company}
                       </Badge>
                     </div>
+                    <Badge variant={"outline"} className="text-xs">
+                      {experience.type}
+                    </Badge>
                     <div className="border-edge border-l-[1px] pl-2">
                       <div className="flex flex-row items-center space-x-2">
                         <p className="text-muted-foreground text-xs">

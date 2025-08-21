@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command",
+  "type": "registry:component",
+  "title": "Command",
+  "description": "A switcher for package manager commands with one-click copy",
+  "registryDependencies": [
+    "tooltip",
+    "tabs",
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "src/core/command/command.tsx",
+      "content": "\"use client\"\n\nimport React, { useState } from \"react\"\n\nimport { Check, ChevronRight, Code2, Copy } from \"lucide-react\"\n\nimport { Separator } from \"@/components/ui/separator\"\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\"\nimport { TooltipProvider } from \"@/components/ui/tooltip\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type CommandManager = \"npm\" | \"yarn\" | \"pnpm\"\n\nexport interface Commands {\n  commands?: {\n    npm: string\n    yarn: string\n    pnpm: string\n  }\n  defaultTab?: CommandManager\n}\n\nexport function Commands({\n  commands = { npm: \"npm\", yarn: \"yarn\", pnpm: \"pnpm\" },\n  defaultTab = \"pnpm\",\n}: Commands) {\n  const [selectedTab, setSelectedTab] = useState<CommandManager>(defaultTab)\n\n  return (\n    <TooltipProvider>\n      <Tabs\n        value={selectedTab}\n        onValueChange={(val) => setSelectedTab(val as CommandManager)}\n        defaultValue={defaultTab}\n        className=\"group bg-primary-foreground relative my-2 flex w-full gap-0 rounded-md\"\n      >\n        <TabsList className=\"border-muted-foreground/10 flex w-full items-center justify-start rounded-none rounded-t-md border-b-[1px] bg-transparent py-5\">\n          <Code2 className=\"text-muted-foreground mx-3 h-4 w-4\" />\n          <div>\n            <TabsTrigger value=\"pnpm\">pnpm</TabsTrigger>\n            <TabsTrigger value=\"npm\">npm</TabsTrigger>\n            <TabsTrigger value=\"yarn\">yarn</TabsTrigger>\n          </div>\n          <CopyCode code={commands[selectedTab]} position=\"absolute\" />\n        </TabsList>\n        <Separator className=\"h-px w-full\" />\n        {Object.entries(commands).map(([manager, command]) => (\n          <TabsContent key={manager} value={manager}>\n            <div className=\"text-muted-foreground relative flex flex-row items-center rounded-b-md p-3 font-mono text-sm\">\n              <div>\n                <ChevronRight className=\"text-muted-foreground mr-3 h-4 w-4\" />\n              </div>\n              <pre className=\"overflow-x-auto pr-10\">{command}</pre>\n            </div>\n          </TabsContent>\n        ))}\n      </Tabs>\n    </TooltipProvider>\n  )\n}\n\ntype CopyCodeProps = {\n  code: string\n  position?: \"absolute\" | \"relative\"\n}\n\nconst CopyCode: React.FC<CopyCodeProps> = ({ code, position = \"absolute\" }) => {\n  const [hasCheckIcon, setHasCheckIcon] = useState(false)\n\n  const onCopy = () => {\n    navigator.clipboard.writeText(code)\n    setHasCheckIcon(true)\n\n    setTimeout(() => {\n      setHasCheckIcon(false)\n    }, 1000)\n  }\n\n  return (\n    <div\n      className={cn(\n        position === \"absolute\" ? \"absolute top-3 right-3\" : \"relative\",\n        \"cursor-pointer bg-transparent p-2 opacity-100 group-hover:opacity-100\"\n      )}\n      onClick={onCopy}\n    >\n      <div\n        className={`absolute inset-0 transform transition-all duration-150 ${\n          hasCheckIcon ? \"scale-90 opacity-0\" : \"scale-100 opacity-100\"\n        }`}\n      >\n        <Copy className=\"h-4 w-4\" />\n      </div>\n      <div\n        className={`absolute inset-0 transform transition-all duration-150 ${\n          hasCheckIcon ? \"scale-100 opacity-100\" : \"scale-90 opacity-0\"\n        }`}\n      >\n        <Check className=\"h-4 w-4\" />\n      </div>\n    </div>\n  )\n}\n\nexport { CopyCode }\n",
+      "type": "registry:component",
+      "target": "src/components/ui/command.tsx"
+    }
+  ]
+}
