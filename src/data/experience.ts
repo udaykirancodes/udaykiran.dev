@@ -14,7 +14,7 @@ export const EXPERIENCE: Experience[] = [
   {
     title: "Software Developer Engineer",
     company: "HexaCluster",
-    logo: "/assets/tech-stack/react.svg",
+    logo: "",
     isExpanded: true,
     descriptionList: [
       "Built custom UI components and extended shadcn/ui primitives to meet specific product requirements",
@@ -41,7 +41,7 @@ export const EXPERIENCE: Experience[] = [
   {
     title: "UI/UX Developer Intern",
     company: "HexaCluster",
-    logo: "/assets/tech-stack/react.svg",
+    logo: "",
     isExpanded: false,
     descriptionList: [
       "Designed and developed pixel-perfect web interfaces with a focus on user experience and responsiveness",
@@ -56,7 +56,7 @@ export const EXPERIENCE: Experience[] = [
   {
     title: "Next.js Developer Intern",
     company: "CosEdge",
-    logo: "/assets/tech-stack/react.svg",
+    logo: "",
     isExpanded: false,
     descriptionList: [
       "Developed pixel-perfect websites following modern UI/UX design practices",

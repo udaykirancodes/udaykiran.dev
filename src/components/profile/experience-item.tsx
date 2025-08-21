@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/collapsible"
 import { Experience } from "@/data/experience"
 import { cn } from "@/lib/utils"
+import { Avatar, AvatarFallback } from "../ui/avatar"
 import { Badge } from "../ui/badge"
 
 export function ExperienceItem({
@@ -18,6 +19,10 @@ export function ExperienceItem({
   className?: string
   experience: Experience
 }) {
+  const companyName = experience.company
+  const isUpperCase = (char: string) => char === char.toUpperCase()
+  const avatarName = companyName.split("").filter(isUpperCase).join("")
+
   return (
     <Collapsible defaultOpen={experience.isExpanded} asChild>
       <div
@@ -43,7 +48,9 @@ export function ExperienceItem({
               className="mx-4 flex size-6 shrink-0 items-center justify-center"
               aria-hidden="true"
             >
-              {experience.company.charAt(0)}
+              <Avatar>
+                <AvatarFallback>{avatarName}</AvatarFallback>
+              </Avatar>
             </div>
           )}
 
@@ -62,8 +69,13 @@ export function ExperienceItem({
 
                   <div className="flex h-full w-full flex-row items-center gap-x-2">
                     <Badge variant={"outline"} className="text-xs">
-                      {experience.type}
+                      {experience.company}
                     </Badge>
+                    <div className="border-edge border-l-[1px] pl-2">
+                      <Badge variant={"outline"} className="text-xs">
+                        {experience.type}
+                      </Badge>
+                    </div>
                     <div className="border-edge border-l-[1px] pl-2">
                       <div className="flex flex-row items-center space-x-2">
                         <p className="text-muted-foreground text-xs">
