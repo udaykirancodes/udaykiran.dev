@@ -7,8 +7,8 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
+import { USER } from "@/data"
 import { NAV_ITEMS } from "@/data/nav-items"
-import { USER } from "@/data/user"
 import { cn } from "@/lib/utils"
 
 import { AlignJustifyIcon } from "lucide-react"

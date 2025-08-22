@@ -1,4 +1,4 @@
-import { USER } from "@/data/user"
+import { USER } from "@/data"
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { ContainerWrapper } from "./container"

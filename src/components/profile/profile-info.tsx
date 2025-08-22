@@ -2,7 +2,7 @@ import { ArrowUpRight, Code2Icon, Mail, MapPin } from "lucide-react"
 
 import { Button } from "../ui/button"
 
-import { USER } from "@/data/user"
+import { USER } from "@/data"
 import Image from "next/image"
 import React from "react"
 

@@ -1,4 +1,4 @@
-import { USER } from "@/data/user"
+import { USER } from "@/data"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 

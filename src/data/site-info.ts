@@ -1,0 +1,32 @@
+import { USER } from "./user"
+
+export const SITE_INFO = {
+  siteName: "UdayKiran | SDE | Portfolio",
+  url: "https://udaykiran.dev",
+  name: "Uday Kiran",
+  description:
+    "Explore the portfolio of Udaykiran, a skilled Software Developer specializing in modern web technologies like React, Next.js, and TypeScript. Discover high-performance, scalable applications built with expertise in front-end development, microservices, and backend frameworks like Node.js, Spring Boot, and Golang.",
+  ogImage: USER.avatar,
+  keywords: [
+    "shadcn",
+    "UI/UX",
+    "design",
+    "portfolio",
+    "magicui",
+    "aceternity",
+    "framer-motion",
+    "motion",
+    "dev",
+    "3d portfolio",
+    "minimal",
+    "Uday Kiran",
+    "Uday Kiran Bandarugalla",
+    "Uday Kiran SDE",
+  ],
+  authors: [
+    {
+      name: USER.fullName,
+      url: "https://udaykiran.dev",
+    },
+  ],
+}

@@ -1,8 +1,13 @@
 export const USER = {
-  name: "Uday Kiran",
-  description: "",
+  name: "UDAY KIRAN",
   email: "udaykiranbandarugalla@gmail.com",
   avatar: "/assets/uday.jpeg",
+  firstName: "Uday Kiran",
+  lastName: "Bandarugalla",
+  fullName: "Uday Kiran Bandarugalla",
+  username: "udaykirancodes",
+  twitterUsername: "@udaykirancodes",
+  gender: "Male",
   socials: [
     {
       name: "Github",

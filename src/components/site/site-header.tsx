@@ -1,7 +1,7 @@
 "use client"
 
+import { USER } from "@/data"
 import { NAV_ITEMS } from "@/data/nav-items"
-import { USER } from "@/data/user"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
