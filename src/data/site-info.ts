@@ -5,7 +5,7 @@ export const SITE_INFO = {
   url: "https://udaykiran.dev",
   name: "Uday Kiran",
   description:
-    "Explore the portfolio of Udaykiran, a skilled Software Developer specializing in modern web technologies like React, Next.js, and TypeScript. Discover high-performance, scalable applications built with expertise in front-end development, microservices, and backend frameworks like Node.js, Spring Boot, and Golang.",
+    "Explore the portfolio of Udaykiran, a skilled Software Developer specializing in modern web technologies like React, Next.js, TypeScript and GoLang.",
   ogImage: USER.avatar,
   keywords: [
     "shadcn",

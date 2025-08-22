@@ -69,12 +69,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "https://udaykiran.dev/assets/favicon.ico",
+        url: "/assets/favicon.ico",
         sizes: "any",
       },
     ],
     apple: {
-      url: "https://udaykiran.dev/assets/apple-touch-icon.png",
+      url: "/assets/apple-touch-icon.png",
       type: "image/png",
       sizes: "180x180",
     },
