@@ -1,4 +1,4 @@
-import { Commands } from "@/core/command/command"
+import { Command } from "@/core/command/command"
 
 const c = {
   npm: "npm command",
@@ -13,7 +13,7 @@ type ComponentMap = {
 export const COMPONENT_MAP: ComponentMap = {
   command: (
     <div className="bg-background h-full w-full">
-      <Commands commands={c} />
+      <Command commands={c} />
     </div>
   ),
 }

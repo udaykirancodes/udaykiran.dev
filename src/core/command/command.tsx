@@ -12,8 +12,8 @@ import { cn } from "@/lib/utils"
 
 export type CommandManager = "npm" | "yarn" | "pnpm"
 
-export interface Commands {
-  commands?: {
+export interface Command {
+  commands: {
     npm: string
     yarn: string
     pnpm: string
@@ -21,10 +21,10 @@ export interface Commands {
   defaultTab?: CommandManager
 }
 
-export function Commands({
+export function Command({
   commands = { npm: "npm", yarn: "yarn", pnpm: "pnpm" },
   defaultTab = "pnpm",
-}: Commands) {
+}: Command) {
   const [selectedTab, setSelectedTab] = useState<CommandManager>(defaultTab)
 
   return (

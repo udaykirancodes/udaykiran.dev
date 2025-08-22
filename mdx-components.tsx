@@ -5,7 +5,7 @@ import React from "react"
 import { Code } from "@/components/code/code"
 import { CodeWithFilename } from "@/components/code/code-with-filename"
 import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
-import { Commands } from "@/components/code/commands"
+import { CommandWrapper } from "@/components/code/command-wrapper"
 import { CopyFileName } from "@/components/code/copy-file-name"
 import { PreviewComponentWithCode } from "@/components/code/preview-and-code"
 import { Separator } from "@/components/profile/separator"
@@ -32,6 +32,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 
 const customComponents = {
   Code,
+  CommandWrapper,
   CodeCollapsibleWrapper,
   Accordion,
   AccordionContent,
@@ -41,7 +42,6 @@ const customComponents = {
   AlertTitle,
   AlertDescription,
   Button,
-  Commands,
   PreviewComponentWithCode,
   PageHeaderTitle,
   CodeWithFilename,
