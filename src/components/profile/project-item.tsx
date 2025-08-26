@@ -117,7 +117,7 @@ export function ProjectItem({
             <div className="flex flex-col space-y-2">
               <p className="text-sm">{project.description}</p>
               {project.descriptionList.length > 0 && (
-                <ul className="flex w-full list-disc flex-col flex-wrap gap-1.5 space-x-3 pl-5">
+                <ul className="flex w-full list-disc flex-col gap-1.5 space-x-3 pl-5">
                   {project.descriptionList.map((item, index) => (
                     <li key={index} className="text-muted-foreground">
                       <p className="text-primary text-sm">{item}</p>

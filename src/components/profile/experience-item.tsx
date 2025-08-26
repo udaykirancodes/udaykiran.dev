@@ -113,7 +113,7 @@ export function ExperienceItem({
           <div className="border-edge space-y-4 border-t border-dashed p-4">
             <div className="space-y-2">
               {experience.descriptionList.length > 0 && (
-                <ul className="flex list-disc flex-wrap gap-1.5 pl-5">
+                <ul className="flex list-disc flex-col gap-1.5 pl-5">
                   {experience.descriptionList.map((item, index) => (
                     <li key={index} className="text-muted-foreground">
                       <p className="text-primary text-sm">{item}</p>
