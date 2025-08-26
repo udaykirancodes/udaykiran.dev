@@ -16,6 +16,20 @@
           "target": "src/components/ui/command.tsx"
         }
       ]
+    },
+    {
+      "name": "wellfound-landing-animation",
+      "type": "registry:component",
+      "title": "WellFound Landing Animation",
+      "description": "Mouse-responsive floating tech buttons with smooth framer-motion animations",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/core/wellfound-landing-animation/wellfound-landing-animation.tsx",
+          "type": "registry:component",
+          "target": "src/components/ui/wellfound-landing-animation.tsx"
+        }
+      ]
     }
   ]
 }

@@ -1,4 +1,5 @@
 import { Command } from "@/core/command/command"
+import { WellFoundLandingAnimation } from "@/core/wellfound-landing-animation"
 
 const c = {
   npm: "npm command",
@@ -14,6 +15,11 @@ export const COMPONENT_MAP: ComponentMap = {
   command: (
     <div className="bg-background h-full w-full">
       <Command commands={c} />
+    </div>
+  ),
+  "wellfound-landing-animation": (
+    <div className="h-full w-full">
+      <WellFoundLandingAnimation />
     </div>
   ),
 }
