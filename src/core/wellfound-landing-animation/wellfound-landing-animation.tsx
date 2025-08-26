@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { useEffect, useRef, useState } from "react"
 
 const MULTIPLIER = 5
+type DIRECTION = "opposite" | "same"
 
 const techButtons = [
   { id: 1, name: "Next.js", x: 15, y: 20, multiplier: 0.03 * MULTIPLIER },
@@ -21,7 +22,13 @@ const techButtons = [
   { id: 10, name: "shadcn/ui", x: 75, y: 25, multiplier: 0.035 * MULTIPLIER },
 ]
 
-export const WellFoundLandingAnimation = () => {
+type Props = {
+  direction?: DIRECTION
+}
+
+export const WellFoundLandingAnimation = ({
+  direction = "opposite",
+}: Props) => {
   const ref = useRef<HTMLDivElement | null>(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -71,8 +78,12 @@ export const WellFoundLandingAnimation = () => {
               mass: 0.8,
             }}
             animate={{
-              x: (mousePosition.x - state.width / 2) * item.multiplier,
-              y: (mousePosition.y - state.height / 2) * item.multiplier,
+              x:
+                (direction === "opposite" ? -1 : 1) *
+                ((mousePosition.x - state.width / 2) * item.multiplier),
+              y:
+                (direction === "opposite" ? -1 : 1) *
+                ((mousePosition.y - state.height / 2) * item.multiplier),
             }}
           >
             <Button asChild variant={"outline"}>

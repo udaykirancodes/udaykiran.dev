@@ -3,6 +3,7 @@ import Link from "next/link"
 import React from "react"
 
 import { Code } from "@/components/code/code"
+import { CodeTabs } from "@/components/code/code-tabs"
 import { CodeWithFilename } from "@/components/code/code-with-filename"
 import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
 import { CommandWrapper } from "@/components/code/command-wrapper"
@@ -47,6 +48,19 @@ const customComponents = {
   CodeWithFilename,
   CopyFileName,
   Separator,
+  CodeTabs,
+  VariantsText: ({ className }: React.HTMLAttributes<HTMLDivElement>) => (
+    <div
+      className={cn(
+        "border-edge flex w-full items-center justify-center border-b-2 border-dashed px-2 py-2",
+        className
+      )}
+    >
+      <Button variant={"link"} className="mx-0 px-0 text-xl sm:text-2xl">
+        Variants
+      </Button>
+    </div>
+  ),
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(

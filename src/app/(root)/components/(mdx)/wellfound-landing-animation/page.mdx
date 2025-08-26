@@ -1,3 +1,7 @@
+import { getFileContent } from "@/lib/file"
+import OppositeDirection from "./opposite-direction"
+import SameDirection from "./same-direction"
+
 <PreviewComponentWithCode componentName="wellfound-landing-animation" />
 
 <Separator />
@@ -11,3 +15,37 @@
 <Link href="/preview/wellfound-landing-component" className="text-blue-500">
   Click here to preview full screen
 </Link>
+
+<Separator />
+
+<VariantsText />
+
+### 1 - Opposite Direction
+
+animation direction is opposite to the mouse position
+
+<CodeTabs
+  component={
+    <>
+      <OppositeDirection />
+    </>
+  }
+  fileContent={getFileContent(
+    "src/app/(root)/components/(mdx)/wellfound-landing-animation/opposite-direction.tsx"
+  )}
+/>
+
+### 2 - Same Direction
+
+animation direction is same to the mouse position
+
+<CodeTabs
+  component={
+    <>
+      <SameDirection />
+    </>
+  }
+  fileContent={getFileContent(
+    "src/app/(root)/components/(mdx)/wellfound-landing-animation/same-direction.tsx"
+  )}
+/>
