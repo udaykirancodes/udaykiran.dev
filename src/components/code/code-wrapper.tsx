@@ -43,9 +43,9 @@ export function CodeCollapsibleWrapper({
         {children}
       </CollapsibleContent>
 
-      {/* <CollapsibleTrigger className="text-primary from-background/80 absolute inset-x-0 bottom-0 flex h- items-end justify-center rounded-b-lg bg-linear-to-t from-25% to-transparent pb-4 text-sm font-medium group-data-[state=open]/collapsible:hidden">
-        Expand
-      </CollapsibleTrigger> */}
+      <CollapsibleTrigger className="text-primary from-background/70 absolute inset-x-0 bottom-0 flex cursor-pointer items-end justify-center rounded-b-lg bg-linear-to-t from-25% to-transparent pt-4 pb-2 text-sm font-medium group-data-[state=open]/collapsible:hidden">
+        <h4 className="text-primary/80 text-base">Expand</h4>
+      </CollapsibleTrigger>
     </Collapsible>
   )
 }
