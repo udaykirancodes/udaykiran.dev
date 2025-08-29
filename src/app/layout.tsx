@@ -5,6 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { SITE_INFO, USER } from "@/data"
+import { generateMetaDataForOg } from "@/lib/utils"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -86,6 +87,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const result = generateMetaDataForOg("wellfound-landing-animation")
+  // console.log(result.openGraph?.images.map((i) => i.url))
   return (
     <html lang="en" suppressHydrationWarning>
       <body

@@ -20,6 +20,7 @@ export async function GET(request: Request) {
             alignItems: "center",
             justifyContent: "center",
             backgroundColor: "black",
+            gap: 0,
           }}
         >
           <div
@@ -64,6 +65,9 @@ export async function GET(request: Request) {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
+              height: "100%",
+              width: "100%",
+              padding: "64px",
               rowGap: "8px",
             }}
           >
@@ -76,7 +80,9 @@ export async function GET(request: Request) {
                 fontWeight: "bold",
                 letterSpacing: "-0.02em",
                 color: "white",
-                background: "red",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               {title}
@@ -85,10 +91,29 @@ export async function GET(request: Request) {
               style={{
                 fontSize: "40px",
                 lineHeight: 1.5,
-                color: "#a8a29e", // stone-400
+                color: "#a8a29e",
+                maxHeight: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
               }}
             >
               {description}
+            </div>
+            <div
+              style={{
+                fontSize: "20px",
+                lineHeight: 1.5,
+                color: "#a8a29e",
+                maxHeight: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+              }}
+            >
+              ~ {USER.name}
             </div>
           </div>
         </div>
