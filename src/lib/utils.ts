@@ -49,7 +49,7 @@ const generateMetaData = (
     ],
     creator: USER.fullName,
     openGraph: {
-      siteName: SITE_INFO.siteName,
+      siteName: title,
       url: "/",
       type: "profile",
       firstName: USER.firstName,
