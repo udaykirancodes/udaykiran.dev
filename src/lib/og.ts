@@ -13,3 +13,8 @@ export const metadataMap = names.reduce(
   },
   {} as Record<string, Metadata>
 )
+
+export const getComponentTitle = (componentName: string) => {
+  const component = COMPONENTS.find((c) => c.name === componentName)
+  return component?.title || ""
+}

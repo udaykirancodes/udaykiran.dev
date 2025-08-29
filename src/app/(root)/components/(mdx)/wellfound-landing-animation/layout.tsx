@@ -1,7 +1,12 @@
-import { metadataMap } from "@/lib/og"
+import { getComponentTitle, metadataMap } from "@/lib/og"
 import React from "react"
 
-export const metadata = metadataMap["wellfound-landing-animation"]
+const componentName = "wellfound-landing-animation"
+
+export const metadata = {
+  title: getComponentTitle(componentName),
+  ...metadataMap[componentName],
+}
 
 export default function Layout({
   children,

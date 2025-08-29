@@ -35,10 +35,7 @@ const generateMetaData = (
     alternates: {
       canonical: "/",
     },
-    title: {
-      template: title,
-      default: description,
-    },
+    title: title,
     description: description,
     keywords: SITE_INFO.keywords,
     authors: [
