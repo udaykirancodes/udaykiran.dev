@@ -30,6 +30,20 @@
           "target": "src/components/ui/wellfound-landing-animation.tsx"
         }
       ]
+    },
+    {
+      "name": "meet-our-team",
+      "type": "registry:component",
+      "title": "Meet Our Team",
+      "description": "A component for displaying a list of team members",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/core/meet-our-team/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/ui/meet-our-team.tsx"
+        }
+      ]
     }
   ]
 }

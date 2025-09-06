@@ -1,0 +1,19 @@
+import { getFileContent } from "@/lib/file"
+import { MeetOurTeamDemo } from "./meet-our-team-demo"
+
+<CodeTabs
+  component={
+    <>
+      <MeetOurTeamDemo />
+    </>
+  }
+  fileContent={getFileContent(
+    "src/app/(root)/components/(mdx)/meet-our-team/meet-our-team-demo.tsx"
+  )}
+/>
+
+<Separator />
+
+# Installation
+
+<CommandWrapper componentName={"meet-our-team"} />

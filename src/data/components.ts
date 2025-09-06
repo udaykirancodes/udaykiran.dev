@@ -14,4 +14,11 @@ export const COMPONENTS = [
     description:
       "Mouse-responsive floating tech buttons with smooth framer-motion animations",
   },
-]
+  {
+    title: "Meet Our Team",
+    name: "meet-our-team",
+    href: "/components/meet-our-team",
+    path: "src/core/meet-out-team/index.tsx",
+    description: "A component for displaying a list of team members",
+  },
+].sort((a, b) => a.title.localeCompare(b.title))
