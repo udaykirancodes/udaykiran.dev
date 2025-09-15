@@ -21,4 +21,12 @@ export const COMPONENTS = [
     path: "src/core/meet-out-team/index.tsx",
     description: "A component for displaying a list of team members",
   },
+  {
+    title: "Server Side Data Table",
+    name: "server-side-data-table",
+    href: "/components/server-side-data-table",
+    path: "",
+    description:
+      "A server-side data table component that handles searching, sorting, and filtering directly on the server",
+  },
 ].sort((a, b) => a.title.localeCompare(b.title))

@@ -1,15 +1,21 @@
-# Welcome to my MDX page!
+### Why server-side handling?
 
-This is some **bold** and _italics_ text.
+In traditional client-side data tables, all the data is loaded into the browser and then filtered, searched, or sorted there. This works fine for small datasets, but quickly becomes slow and inefficient as the data grows.
 
-This is a list in markdown:
+By shifting these operations to the server side, only the required data for the current page is sent to the client. This means:
 
-- One
-- Two
-- Three
+- ⚡ Faster performance with large datasets
+- 📉 Reduced memory and network usage
+- 🌐 Scales much better for enterprise-level applications
 
-<Code showLineNumbers code={`console.log("Hello World")`} />
+The UI is built using shadcn/ui components, ensuring a clean, accessible, and customizable design that blends seamlessly into modern applications.
 
-<CodeCollapsibleWrapper>
-  <Code showLineNumbers code={`console.log("Hello World")`} />
-</CodeCollapsibleWrapper>
+#### GitHub Source Code
+
+[udaykirancodes/server-side-data-table](https://github.com/udaykirancodes/server-side-data-table)
+
+#### Live Demo
+
+[server-side-data-table.vercel.app](https://server-side-data-table.vercel.app/)
+
+- Check the network tab in the browser's developer tools to see the server-side data table in action.
