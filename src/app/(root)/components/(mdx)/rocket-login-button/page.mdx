@@ -1,0 +1,19 @@
+import { Demo } from "@/app/(root)/components/(mdx)/rocket-login-button/demo"
+import { getFileContent } from "@/lib/file"
+
+<CodeTabs
+  component={
+    <>
+      <Demo />
+    </>
+  }
+  fileContent={getFileContent(
+    "src/app/(root)/components/(mdx)/rocket-login-button/demo.tsx"
+  )}
+/>
+
+<Separator />
+
+# Installation
+
+<CommandWrapper componentName={"rocket-login-button"} />

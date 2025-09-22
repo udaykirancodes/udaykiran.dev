@@ -29,4 +29,11 @@ export const COMPONENTS = [
     description:
       "A server-side data table component that handles searching, sorting, and filtering directly on the server",
   },
+  {
+    title: "Rocket Login Button",
+    name: "rocket-login-button",
+    href: "/components/rocket-login-button",
+    path: "src/core/rocket-login-button/index.tsx",
+    description: "An animated button with animation sequences for login pages",
+  },
 ].sort((a, b) => a.title.localeCompare(b.title))
