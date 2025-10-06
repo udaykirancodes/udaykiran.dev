@@ -1,5 +1,6 @@
 import { Separator } from "@/components/profile/separator"
 import { BackButton, ShowComponentInfo } from "@/components/site/component-info"
+import { ComponentNavigator } from "@/components/site/component-navigator"
 import { Button } from "@/components/ui/button"
 
 export default async function Layout({
@@ -19,6 +20,8 @@ export default async function Layout({
           Please adjust the imports
         </Button>
       </div>
+      <Separator />
+      <ComponentNavigator />
     </>
   )
 }
