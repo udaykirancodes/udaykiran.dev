@@ -6,6 +6,8 @@ import { Projects } from "@/components/profile/projects"
 import { Separator } from "@/components/profile/separator"
 import { TechStack } from "@/components/profile/tech-stack"
 import { ContainerWrapper } from "@/components/site/container"
+import { HireMe } from "@/core/hire-me"
+import { TEXT_TO_ANIMATE } from "@/data"
 
 const Page = () => {
   return (
@@ -28,6 +30,7 @@ const Page = () => {
 
         <Experience />
         <Separator />
+        <HireMe text={TEXT_TO_ANIMATE} />
       </ContainerWrapper>
     </>
   )

@@ -36,4 +36,11 @@ export const COMPONENTS = [
     path: "src/core/rocket-login-button/index.tsx",
     description: "An animated button with animation sequences for login pages",
   },
+  {
+    title: "Hire Me",
+    name: "hire-me",
+    href: "/components/hire-me",
+    path: "src/core/hire-me/index.tsx",
+    description: "A component for displaying a hire me button",
+  },
 ].sort((a, b) => a.title.localeCompare(b.title))

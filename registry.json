@@ -58,6 +58,20 @@
           "target": "src/components/ui/rocket-login-button.tsx"
         }
       ]
+    },
+    {
+      "name": "hire-me",
+      "type": "registry:component",
+      "title": "Hire Me",
+      "description": "A component for displaying a hire me button",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/core/hire-me/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/ui/hire-me.tsx"
+        }
+      ]
     }
   ]
 }

@@ -30,3 +30,12 @@ export const SITE_INFO = {
     },
   ],
 }
+
+export const TEXT_TO_ANIMATE = [
+  "I'm Uday Kiran",
+  "I'm a Software Engineer",
+  "Hire me, I use Next.js!",
+  "Hire me, I use Zustand!",
+  "Hire me, I use TailwindCSS!",
+  "Hire me, I use TypeScript!",
+]

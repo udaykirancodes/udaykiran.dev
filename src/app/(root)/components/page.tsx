@@ -1,6 +1,8 @@
 import { Separator } from "@/components/profile/separator"
 import { PageHeaderTitle } from "@/components/site/page-header-title"
 import { Button } from "@/components/ui/button"
+import { HireMe } from "@/core/hire-me"
+import { TEXT_TO_ANIMATE } from "@/data"
 import { COMPONENTS } from "@/data/components"
 import Image from "next/image"
 import Link from "next/link"
@@ -41,6 +43,7 @@ const Page = () => {
         </div>
       ))}
       <div className="flex-1"></div>
+      <HireMe text={TEXT_TO_ANIMATE} />
     </>
   )
 }

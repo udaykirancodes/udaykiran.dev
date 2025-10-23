@@ -7,11 +7,11 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
-import { USER } from "@/data"
+import { COMPONENTS, USER } from "@/data"
 import { NAV_ITEMS } from "@/data/nav-items"
 import { cn } from "@/lib/utils"
 
-import { AlignJustifyIcon } from "lucide-react"
+import { AlignJustifyIcon, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
 const MobileNavbar = ({ activeUrl }: { activeUrl: string }) => {
@@ -50,6 +50,28 @@ const MobileNavbar = ({ activeUrl }: { activeUrl: string }) => {
                     )}
                   >
                     <li>{item.name}</li>
+                  </Link>
+                </DrawerClose>
+              </div>
+            ))}
+            {COMPONENTS.map((item, index) => (
+              <div key={index} className="flex items-center gap-y-0 pl-2">
+                <DrawerClose key={index} asChild>
+                  <Link
+                    prefetch={false}
+                    key={index}
+                    href={item.href}
+                    className={cn(
+                      "text-sm",
+                      "flex items-center",
+                      "text-base font-medium",
+                      activeUrl === item.href
+                        ? "text-primary"
+                        : "text-muted-foreground"
+                    )}
+                  >
+                    <ChevronRight className="text-muted-foreground h-4 w-4 cursor-pointer" />
+                    <li>{item.title}</li>
                   </Link>
                 </DrawerClose>
               </div>
