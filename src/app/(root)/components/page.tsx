@@ -4,8 +4,26 @@ import { Button } from "@/components/ui/button"
 import { HireMe } from "@/core/hire-me"
 import { TEXT_TO_ANIMATE } from "@/data"
 import { COMPONENTS } from "@/data/components"
+import { generateMetaData, generateOgImageUrl } from "@/lib/utils"
+import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+
+const pageMetadata = {
+  title: "Components",
+  description: "Explore the collection of reusable components by Uday",
+}
+
+const generatedStaticMetadata = generateMetaData(
+  pageMetadata.title,
+  pageMetadata.description,
+  generateOgImageUrl(pageMetadata.title, pageMetadata.description)
+)
+
+export const metadata: Metadata = {
+  title: "Components",
+  ...generatedStaticMetadata,
+}
 
 const Page = () => {
   return (

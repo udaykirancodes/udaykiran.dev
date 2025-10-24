@@ -25,7 +25,7 @@ export const generateMetaDataForOg = (componentName: string): Metadata => {
   )
 }
 
-const generateMetaData = (
+export const generateMetaData = (
   title: string,
   description: string,
   imageUrl: string
@@ -46,7 +46,7 @@ const generateMetaData = (
     ],
     creator: USER.fullName,
     openGraph: {
-      siteName: title,
+      siteName: `${title} | ${SITE_INFO.siteName}`,
       url: "/",
       type: "profile",
       firstName: USER.firstName,
