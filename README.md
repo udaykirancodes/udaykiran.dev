@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧩 udaykiran.dev — Portfolio + Component Registry
 
-## Getting Started
+A collection of **modern, reusable, and production-ready UI components** built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**.
 
-First, run the development server:
+This repository powers my personal portfolio — [**udaykiran.dev**](https://udaykiran.dev) — and serves as a **component registry** for developers who value clean design, accessibility, and performance.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🧱 **Reusable Components** — Modular, composable components for faster UI development
+- 🎨 **Clean & Modern Design** — Consistent design system inspired by _shadcn/ui_
+- 🌗 **Light & Dark Theme Support** — Smooth theme transitions
+- ⚙️ **TypeScript-First** — Strong typing for scalability and maintainability
+- 🧩 **Component Registry** — Easy-to-browse collection of animations and UI primitives
+- 🧑‍💻 **Developer Experience** — ESLint, Prettier, and Husky integrated
+- ⚡ **Performance-Oriented** — Built with Next.js for SSR, SSG
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📁 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** Next.js 15
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Library:** shadcn/ui
+- **Animation:** Framer Motion
+- **Linting & Formatting:** ESLint, Prettier, Husky
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
