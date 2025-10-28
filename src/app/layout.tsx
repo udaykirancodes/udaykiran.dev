@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 
 import { ThemeProvider } from "@/components/providers/theme-provider"
+import { PageViewAnalytics } from "@/components/site/analytics"
 import { Toaster } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { SITE_INFO, USER } from "@/data"
@@ -95,6 +96,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} w-full antialiased`}
       >
+        <PageViewAnalytics />
         <TooltipProvider>
           <ThemeProvider
             attribute="class"
