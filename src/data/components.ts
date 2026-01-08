@@ -43,4 +43,11 @@ export const COMPONENTS = [
     path: "src/core/hire-me/index.tsx",
     description: "A component for displaying a hire me button",
   },
+  {
+    title: "Animated Clock",
+    name: "animated-clock",
+    href: "/components/animated-clock",
+    path: "src/core/animated-clock/index.tsx",
+    description: "An animated clock component",
+  },
 ].sort((a, b) => a.title.localeCompare(b.title))

@@ -1,3 +1,4 @@
+import AnimatedClock from "@/core/animated-clock"
 import { Command } from "@/core/command/command"
 import { WellFoundLandingAnimation } from "@/core/wellfound-landing-animation"
 
@@ -20,6 +21,11 @@ export const COMPONENT_MAP: ComponentMap = {
   "wellfound-landing-animation": (
     <div className="h-full w-full">
       <WellFoundLandingAnimation />
+    </div>
+  ),
+  "animated-clock": (
+    <div className="h-full w-full">
+      <AnimatedClock />
     </div>
   ),
 }

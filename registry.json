@@ -72,6 +72,20 @@
           "target": "src/components/ui/hire-me.tsx"
         }
       ]
+    },
+    {
+      "name": "animated-clock",
+      "type": "registry:component",
+      "title": "Animated Clock",
+      "description": "An animated clock component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/core/animated-clock/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/ui/animated-clock.tsx"
+        }
+      ]
     }
   ]
 }

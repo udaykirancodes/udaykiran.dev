@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "animated-clock",
+  "type": "registry:component",
+  "title": "Animated Clock",
+  "description": "An animated clock component",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/core/animated-clock/index.tsx",
+      "content": "\"use client\"\n\nimport { motion } from \"motion/react\"\nimport { useEffect, useState } from \"react\"\n\nconst AnimatedClock = () => {\n  const [time, setTime] = useState(new Date())\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setTime(new Date())\n    }, 1000)\n    return () => clearInterval(interval)\n  }, [])\n\n  return (\n    <div className=\"flex h-[600px] items-end justify-center overflow-hidden\">\n      <div className=\"mt-10 inline-flex gap-x-4 text-white\">\n        <WatchCard limit={2} activeNumber={Math.floor(time.getHours() / 10)} />\n        <WatchCard limit={9} activeNumber={Math.floor(time.getHours() % 10)} />\n        :\n        <WatchCard\n          limit={5}\n          activeNumber={Math.floor(time.getMinutes() / 10)}\n        />\n        <WatchCard\n          limit={9}\n          activeNumber={Math.floor(time.getMinutes() % 10)}\n        />\n        :\n        <WatchCard\n          limit={5}\n          activeNumber={Math.floor(time.getSeconds() / 10)}\n        />\n        <WatchCard\n          limit={9}\n          activeNumber={Math.floor(time.getSeconds() % 10)}\n        />\n      </div>\n    </div>\n  )\n}\n\nexport default AnimatedClock\n\nexport const WatchCard = ({\n  limit,\n  activeNumber,\n}: {\n  limit: number\n  activeNumber: number\n}) => {\n  return (\n    <motion.div\n      initial={{ y: 0 }}\n      animate={{ y: activeNumber * 32 * -1 }}\n      transition={{\n        duration: activeNumber === 0 ? 0.3 : 1,\n        type: \"spring\",\n        stiffness: 120,\n        damping: 20,\n      }}\n      className={\n        \"flex max-h-max w-12 flex-col items-center rounded-md bg-yellow-500 py-1\"\n      }\n    >\n      {Array.from({ length: limit + 1 }).map((_, i) => {\n        return (\n          <motion.div\n            key={i}\n            className={`flex size-8 items-center justify-center rounded-full text-xl transition duration-300 ease-in ${\n              activeNumber === i ? \"bg-black\" : \"bg-yellow-500\"\n            }`}\n          >\n            {i}\n          </motion.div>\n        )\n      })}\n    </motion.div>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "src/components/ui/animated-clock.tsx"
+    }
+  ]
+}
