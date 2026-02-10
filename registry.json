@@ -86,6 +86,20 @@
           "target": "src/components/ui/animated-clock.tsx"
         }
       ]
+    },
+    {
+      "name": "hold-to-delete",
+      "type": "registry:component",
+      "title": "Hold To Delete",
+      "description": "A button component that triggers a delete action on hold",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/core/hold-to-delete/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/ui/hold-to-delete.tsx"
+        }
+      ]
     }
   ]
 }

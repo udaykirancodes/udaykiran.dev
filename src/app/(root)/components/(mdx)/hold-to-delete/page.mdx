@@ -1,0 +1,13 @@
+import { getFileContent } from "@/lib/file"
+import Demo from "./demo"
+
+<CodeTabs
+  component={<Demo />}
+  fileContent={getFileContent("src/core/hold-to-delete/index.tsx")}
+/>
+
+<Separator />
+
+# Installation
+
+<CommandWrapper componentName={"hold-to-delete"} />

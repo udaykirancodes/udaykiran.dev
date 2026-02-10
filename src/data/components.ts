@@ -50,4 +50,11 @@ export const COMPONENTS = [
     path: "src/core/animated-clock/index.tsx",
     description: "An animated clock component",
   },
+  {
+    title: "Hold To Delete",
+    name: "hold-to-delete",
+    href: "/components/hold-to-delete",
+    path: "src/core/hold-to-delete/index.tsx",
+    description: "A button component that triggers a delete action on hold",
+  },
 ].sort((a, b) => a.title.localeCompare(b.title))
