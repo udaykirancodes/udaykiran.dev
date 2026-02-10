@@ -108,11 +108,13 @@ export default function RootLayout({
             <Toaster />
           </ThemeProvider>
         </TooltipProvider>
-        <Script
-          defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id="d1c58d41-ef25-43f0-89e8-ca35a7028bd6"
-        ></Script>
+        {process.env.NODE_ENV !== "development" && (
+          <Script
+            defer
+            src="https://cloud.umami.is/script.js"
+            data-website-id="d1c58d41-ef25-43f0-89e8-ca35a7028bd6"
+          ></Script>
+        )}
       </body>
     </html>
   )

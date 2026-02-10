@@ -26,4 +26,37 @@ export const PROJECTS: Project[] = [
       "Shadcn CLI supported",
     ],
   },
+  {
+    title: "npx-udaykiran",
+    description:
+      "An interactive terminal UI portfolio built for the modern developer",
+    logo: "/assets/tech-stack/npm.svg",
+    githubLink: "https://github.com/udaykirancodes/npx-udaykiran",
+    liveLink: "https://www.npmjs.com/package/udaykiran",
+    skills: ["Node.js", "TypeScript", "Terminal UI", "CLI UX", "ESM", "tsup"],
+    isExpanded: true,
+    descriptionList: [
+      "Interactive terminal UI (TUI) experience",
+      "Keyboard-driven navigation",
+      "Runs directly in terminal via npx udaykiran",
+      "Beautiful colored layouts and prompts",
+    ],
+  },
+  {
+    title: "kinetic-studio",
+    description:
+      "A developer-first motion studio for designing and rendering kinetic typography videos with React and Remotion",
+    logo: "/assets/tech-stack/video-library.svg",
+    githubLink: "https://github.com/udaykirancodes/kinetic-studio",
+    liveLink: "https://kineticstudio.vercel.app/",
+    skills: ["React", "Next.js", "Remotion", "TypeScript"],
+    isExpanded: true,
+    descriptionList: [
+      "Kinetic typography video editing",
+      "Programmatic video rendering using React & Remotion",
+      "Live video preview inside the browser",
+      "Frame-accurate sequencing and timing control",
+      "Editor-style UX inspired by motion design tools",
+    ],
+  },
 ]
