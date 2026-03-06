@@ -1,3 +1,10 @@
+import { getComponentTitle, metadataMap } from "@/lib/og"
+
+export const metadata = {
+  title: getComponentTitle("hold-to-delete"),
+  ...metadataMap["hold-to-delete"],
+}
+
 import { getFileContent } from "@/lib/file"
 import Demo from "./demo"
 

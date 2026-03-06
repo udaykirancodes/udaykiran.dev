@@ -1,3 +1,10 @@
+import { getComponentTitle, metadataMap } from "@/lib/og"
+
+export const metadata = {
+  title: getComponentTitle("wellfound-landing-animation"),
+  ...metadataMap["wellfound-landing-animation"],
+}
+
 import { getFileContent } from "@/lib/file"
 import OppositeDirection from "./opposite-direction"
 import SameDirection from "./same-direction"

@@ -100,6 +100,14 @@
           "target": "src/components/ui/hold-to-delete.tsx"
         }
       ]
+    },
+    {
+      "name": "server-side-data-table",
+      "type": "registry:component",
+      "title": "Server Side Data Table",
+      "description": "A server-side data table component that handles searching, sorting, and filtering directly on the server",
+      "registryDependencies": [],
+      "files": []
     }
   ]
 }

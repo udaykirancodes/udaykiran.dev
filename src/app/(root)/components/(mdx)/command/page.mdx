@@ -1,3 +1,10 @@
+import { getComponentTitle, metadataMap } from "@/lib/og"
+
+export const metadata = {
+  title: getComponentTitle("command"),
+  ...metadataMap["command"],
+}
+
 <PreviewComponentWithCode componentName="command" />
 
 <Separator />

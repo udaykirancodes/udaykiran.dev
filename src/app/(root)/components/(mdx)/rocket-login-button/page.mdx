@@ -1,3 +1,10 @@
+import { getComponentTitle, metadataMap } from "@/lib/og"
+
+export const metadata = {
+  title: getComponentTitle("rocket-login-button"),
+  ...metadataMap["rocket-login-button"],
+}
+
 import { Demo } from "@/app/(root)/components/(mdx)/rocket-login-button/demo"
 import { getFileContent } from "@/lib/file"
 

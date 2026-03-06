@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
       "A developer-first motion studio for designing and rendering kinetic typography videos with React and Remotion",
     logo: "/assets/tech-stack/video-library.svg",
     githubLink: "https://github.com/udaykirancodes/kinetic-studio",
-    liveLink: "https://kineticstudio.vercel.app/",
+    liveLink: "https://kinetics.udaykiran.dev/",
     skills: ["React", "Next.js", "Remotion", "TypeScript"],
     isExpanded: true,
     descriptionList: [
