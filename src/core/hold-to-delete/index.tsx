@@ -8,10 +8,14 @@ const TRANSITION_DURATION = 2 * 1000 // ms
 
 export const HoldToDeleteButton = ({ onDelete }: { onDelete?: () => void }) => {
   const timerRef = React.useRef<NodeJS.Timeout | null>(null)
+  const [isHolding, setIsHolding] = React.useState(false)
+
   const startHold = () => {
     if (timerRef.current) return
+    setIsHolding(true)
     timerRef.current = setTimeout(() => {
       onDelete?.()
+      setIsHolding(false)
     }, TRANSITION_DURATION)
   }
 
@@ -19,18 +23,28 @@ export const HoldToDeleteButton = ({ onDelete }: { onDelete?: () => void }) => {
     if (timerRef.current) {
       clearTimeout(timerRef.current)
       timerRef.current = null
+      setIsHolding(false)
     }
   }
 
   return (
     <>
       <Button
-        onPointerDown={startHold}
-        onPointerUp={cancelHold}
+        onPointerDown={(e) => {
+          (e.target as HTMLElement).setPointerCapture(e.pointerId);
+          startHold();
+        }}
+        onPointerUp={(e) => {
+          (e.target as HTMLElement).releasePointerCapture(e.pointerId);
+          cancelHold();
+        }}
         onPointerLeave={cancelHold}
+        onPointerCancel={cancelHold}
+        onBlur={cancelHold}
         onKeyDown={(e) => {
           if (e.key === " ") {
-            startHold()
+             e.preventDefault(); 
+             startHold();
           }
         }}
         size={"lg"}
@@ -39,7 +53,7 @@ export const HoldToDeleteButton = ({ onDelete }: { onDelete?: () => void }) => {
             cancelHold()
           }
         }}
-        className="group relative cursor-pointer overflow-hidden border-none shadow-none ring-0 ring-offset-0 outline-none group-focus:scale-[0.97] group-focus-visible:scale-[0.97] group-active:scale-[0.97]"
+        className="relative cursor-pointer overflow-hidden border-none shadow-none ring-0 ring-offset-0 outline-none focus:scale-[0.97] focus-visible:scale-[0.97] active:scale-[0.97]"
       >
         <svg height="16" strokeLinejoin="round" viewBox="0 0 16 16" width="16">
           <path
@@ -55,7 +69,8 @@ export const HoldToDeleteButton = ({ onDelete }: { onDelete?: () => void }) => {
           className={cn(
             "flex items-center justify-center gap-2 border border-[#FFDBDC] text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
             "absolute top-0 left-0 flex h-full w-full items-center justify-center border-none bg-[#FFDBDC] text-[#E5484D] dark:bg-[#f56f73] dark:text-white",
-            "transition-all duration-300 ease-out [clip-path:inset(-1px_100%_-1px_-1px)] group-active:duration-[2000ms] group-active:ease-linear group-active:[clip-path:inset(-1px_-1px_-1px_-1px)]"
+            "transition-all duration-300 ease-out [clip-path:inset(-1px_100%_-1px_-1px)]",
+            isHolding ? "duration-[2000ms] ease-linear [clip-path:inset(-1px_-1px_-1px_-1px)]" : ""
           )}
         >
           <svg
