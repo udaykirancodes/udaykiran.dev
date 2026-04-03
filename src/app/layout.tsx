@@ -3,7 +3,6 @@ import { PageViewAnalytics } from "@/components/site/analytics"
 import { Toaster } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { SITE_INFO, USER } from "@/data"
-import { generateMetaDataForOg } from "@/lib/utils"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import Script from "next/script"
@@ -89,8 +88,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const result = generateMetaDataForOg("wellfound-landing-animation")
-  // console.log(result.openGraph?.images.map((i) => i.url))
   return (
     <html lang="en" suppressHydrationWarning>
       <body

@@ -132,7 +132,7 @@ export function ExperienceItem({
   )
 }
 
-const SkillBadgeList = ({ skills }: { skills: string[] }) => {
+export const SkillBadgeList = ({ skills }: { skills: string[] }) => {
   return (
     <ul className="flex flex-wrap gap-1.5">
       {skills.map((skill, index) => (
