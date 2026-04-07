@@ -35,8 +35,8 @@ const Page = () => {
 
         <Experience />
         <Separator />
+
         <HireMe text={TEXT_TO_ANIMATE} />
-        {/* <AnimatingBars /> */}
         <AnimatingScrollBars />
       </ContainerWrapper>
     </>
