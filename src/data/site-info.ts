@@ -6,7 +6,7 @@ export const SITE_INFO = {
   name: "Uday Kiran",
   description:
     "Explore the portfolio of Udaykiran, a skilled Software Developer specializing in modern web technologies like React, Next.js, TypeScript and GoLang.",
-  ogImage: "/assets/portfolio-light.png",
+  ogImage: "/assets/seo-image.png",
   keywords: [
     "shadcn",
     "UI/UX",

@@ -120,6 +120,7 @@ export async function GET(request: Request) {
       ),
       { width: 1200, height: 628 }
     )
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return new Response("Failed to generate image", { status: 500 })
   }

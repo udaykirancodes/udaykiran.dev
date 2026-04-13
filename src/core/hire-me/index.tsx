@@ -23,7 +23,7 @@ export const HireMe = ({ text }: HireMeProps) => {
       ANIMATION_DURATION * 1000 + ANIMATION_REPEAT_DELAY * 1000
     )
     return () => clearInterval(interval)
-  }, [])
+  }, [text.length])
   return (
     <motion.div
       className={cn("fixed right-6 bottom-6 z-50", "flex items-center gap-x-2")}

@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       <Separator />
-      <BackButton />
+      <BackButton title="Components" href="/components" />
       <Separator />
       <ShowComponentInfo />
       <div className="mt-0 flex min-h-screen flex-col px-2">{children}</div>

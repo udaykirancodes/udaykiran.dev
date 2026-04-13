@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 
 import { ArrowRight, GithubIcon, LinkIcon } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { CardDescription } from "../ui/card"
 import { HeaderTitle } from "./header-title"
 
@@ -33,7 +34,7 @@ export const SingleProject: React.FC<{ project: Project }> = ({ project }) => {
       <div className="relative z-10 p-3">
         {/* Link */}
         <div className="group flex w-full cursor-pointer flex-col gap-2">
-          <div className="border-border rounded-[10px] border p-[4px]">
+          <Link href={project.href} className="border-border rounded-[10px] border p-[4px]">
             <div
               className={cn(
                 "bg-muted border-border relative h-[200px] w-full overflow-hidden rounded-[6px] border select-none sm:h-[170px] md:h-[200px]",
@@ -72,8 +73,9 @@ export const SingleProject: React.FC<{ project: Project }> = ({ project }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
           <div className="flex flex-col gap-1 px-2">
+            <Link href={project.href}>
             <div className="flex items-center justify-between">
               <h3 className="text-primary/95 mb-1 text-sm leading-snug font-medium text-balance sm:text-base">
                 {project.title}
@@ -102,6 +104,8 @@ export const SingleProject: React.FC<{ project: Project }> = ({ project }) => {
             <CardDescription className="text-muted-foreground min-h-[40px] text-sm">
               {project.description}
             </CardDescription>
+            </Link>
+
             <div className="flex items-center justify-between gap-1 py-1 select-none">
               <div className="flex gap-x-2">
                 <Tooltip>
@@ -134,12 +138,12 @@ export const SingleProject: React.FC<{ project: Project }> = ({ project }) => {
                   <TooltipContent>Open GitHub Link</TooltipContent>
                 </Tooltip>
               </div>
-              <div className="flex">
+              <Link href={project.href} className="flex">
                 <p className="text-foreground text-xs transition-colors duration-300">
                   View Project
                 </p>
-                <ArrowRight className="text-foreground size-3 -rotate-45 transition-all duration-300 group-hover:rotate-0 sm:size-4" />
-              </div>
+                <ArrowRight className="text-foreground size-3 ml-1 -rotate-45 transition-all duration-300 group-hover:rotate-0 sm:size-4" />
+              </Link>
             </div>
           </div>
         </div>

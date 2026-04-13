@@ -1,5 +1,6 @@
 export type Project = {
   title: string
+  href: string
   description: string
   image: string
   darkModeImage: string
@@ -12,6 +13,7 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     title: "turbo-code",
+    href: "/projects/turbo-code",
     description:
       "A collaborative, real-time code playground and microservices-based evaluation platform",
     image: "/assets/turbo-code-light.png",
@@ -28,6 +30,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "npx-udaykiran",
+    href: "/projects/npx-udaykiran",
     description:
       "An interactive terminal UI portfolio built for the modern developer",
     image: "/assets/npx-udaykiran-light.png",
@@ -44,6 +47,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "kinetic-studio",
+    href: "/projects/kinetic-studio",
     description:
       "A developer-first motion studio for designing and rendering kinetic typography videos with React and Remotion",
     image: "/assets/kinetic-studio-light.png",
@@ -61,6 +65,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "udaykiran.dev",
+    href: "/projects/udaykiran.dev",
     description: "A minimal responsive portfolio with component registry",
     image: "/assets/portfolio-light.png",
     darkModeImage: "/assets/portfolio-dark.png",
