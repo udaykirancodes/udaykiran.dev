@@ -20,7 +20,7 @@ export const AnimatingScrollBars = () => {
   return (
     <section
       className={cn(
-        "fixed top-1/2 left-0 hidden -translate-y-1/2 md:inline-block"
+        "fixed top-1/2 left-0 hidden -translate-y-1/2 lg:inline-block"
       )}
     >
       {Array.from({ length: BAR_COUNT }).map((_, index) => (
