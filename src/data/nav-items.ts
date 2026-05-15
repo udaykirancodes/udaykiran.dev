@@ -1,6 +1,10 @@
 export const NAV_ITEMS = [
   {
-    name: "components",
+    name: "Blogs",
+    href: "/#blogs",
+  },
+  {
+    name: "Components",
     href: "/components",
   },
 ]

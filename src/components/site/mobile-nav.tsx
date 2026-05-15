@@ -35,11 +35,10 @@ const MobileNavbar = ({ activeUrl }: { activeUrl: string }) => {
           </DrawerHeader>
           <ul className="mb-20 flex flex-col gap-3 px-4 pb-4">
             {NAV_ITEMS.map((item, index) => (
-              <div key={index} className="flex flex-col gap-y-2">
+              <li key={index} className="flex flex-col gap-y-2">
                 <DrawerClose asChild className="flex flex-col items-start">
                   <Link
                     prefetch={false}
-                    key={index}
                     href={item.href}
                     className={cn(
                       "text-sm",
@@ -49,17 +48,16 @@ const MobileNavbar = ({ activeUrl }: { activeUrl: string }) => {
                         : "text-muted-foreground"
                     )}
                   >
-                    <li>{item.name}</li>
+                    <span>{item.name}</span>
                   </Link>
                 </DrawerClose>
-              </div>
+              </li>
             ))}
             {COMPONENTS.map((item, index) => (
-              <div key={index} className="flex items-center gap-y-0 pl-2">
-                <DrawerClose key={index} asChild>
+              <li key={index} className="flex items-center gap-y-0 pl-2">
+                <DrawerClose asChild>
                   <Link
                     prefetch={false}
-                    key={index}
                     href={item.href}
                     className={cn(
                       "text-sm",
@@ -71,10 +69,10 @@ const MobileNavbar = ({ activeUrl }: { activeUrl: string }) => {
                     )}
                   >
                     <ChevronRight className="text-muted-foreground h-4 w-4 cursor-pointer" />
-                    <li>{item.title}</li>
+                    <span>{item.title}</span>
                   </Link>
                 </DrawerClose>
-              </div>
+              </li>
             ))}
           </ul>
         </div>

@@ -1,4 +1,4 @@
-// next.config.mjs
+// next.config.ts
 import createMDX from "@next/mdx"
 
 /** @type {import('next').NextConfig} */

@@ -5,6 +5,7 @@ import { NAV_ITEMS } from "@/data/nav-items"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { TextRoll } from "../profile/text-roll"
 import { Button } from "../ui/button"
 import { ContainerWrapper } from "./container"
 import MobileNavbar from "./mobile-nav"
@@ -53,22 +54,29 @@ export const SiteHeader = () => {
               <ThemeSwitcher />
             </ul>
           </div>
-
           {/* Mobile Nav */}
-          <div className="relative flex h-full w-full items-center gap-x-3 sm:hidden">
+          <div className="relative flex h-full items-center gap-x-3 sm:hidden">
             <MobileNavbar activeUrl={activeUrl} />
-            {/* {activeUrl !== "/" && (
-              <div className="absolute z-50 flex w-auto items-center justify-center">
-                <Button
-                  variant="link"
-                  size={"icon"}
-                  className="size-8 underline"
-                >
-                  Home
-                </Button>
-              </div>
-            )} */}
           </div>
+          <div className="sm:hidden">
+            <TextRoll
+              className="text-muted-foreground font-mono text-xs transition-all duration-100 ease-out sm:text-sm"
+              variants={{
+                enter: {
+                  initial: { rotateX: 0, filter: "blur(0px)" },
+                  animate: { rotateX: 90, filter: "blur(2px)" },
+                },
+                exit: {
+                  initial: { rotateX: 90, filter: "blur(2px)" },
+                  animate: { rotateX: 0, filter: "blur(0px)" },
+                },
+              }}
+              duration={1.2}
+            >
+              npx udaykiran
+            </TextRoll>
+          </div>
+
           <div className="sm:hidden">
             <ThemeSwitcher />
           </div>

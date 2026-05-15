@@ -1,6 +1,7 @@
 "use client"
 
 import { HireMe } from "@/core/hire-me"
+import { USER } from "@/data"
 
 const TEXT_TO_ANIMATE = [
   "I'm Uday Kiran",
@@ -17,7 +18,7 @@ export const HireMeDemo = () => {
       <h1 className="text-base underline underline-offset-4">
         check this at bottom right!
       </h1>
-      <HireMe text={TEXT_TO_ANIMATE} />
+      <HireMe text={TEXT_TO_ANIMATE} avatarSrc={USER.avatar} />
     </div>
   )
 }

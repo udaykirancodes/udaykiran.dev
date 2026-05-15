@@ -44,7 +44,11 @@ export const SiteFooter = () => {
         <div className="py-0">
           <h3 className="text-muted-foreground px-4 text-center font-mono text-xs text-balance">
             Developed by{" "}
-            <Button variant={"link"} className="m-0 p-0 text-xs underline">
+            <Button
+              asChild
+              variant={"link"}
+              className="m-0 p-0 text-xs underline"
+            >
               <a href="https://github.com/udaykirancodes" target="_blank">
                 {USER.name}
               </a>

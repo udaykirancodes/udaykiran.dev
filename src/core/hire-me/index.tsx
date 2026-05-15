@@ -10,9 +10,10 @@ const ANIMATION_REPEAT_DELAY = 1 // seconds
 
 export type HireMeProps = {
   text: string[]
+  avatarSrc: string
 }
 
-export const HireMe = ({ text }: HireMeProps) => {
+export const HireMe = ({ text, avatarSrc }: HireMeProps) => {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
@@ -26,7 +27,10 @@ export const HireMe = ({ text }: HireMeProps) => {
   }, [text.length])
   return (
     <motion.div
-      className={cn("fixed right-6 bottom-6 z-50", "flex items-center gap-x-2")}
+      className={cn(
+        "fixed right-6 bottom-6 z-50",
+        "hidden items-center gap-x-2 sm:flex"
+      )}
     >
       <div className={cn("flex h-10 items-center justify-center")}>
         <motion.div
@@ -52,7 +56,7 @@ export const HireMe = ({ text }: HireMeProps) => {
         </motion.div>
       </div>
       <Image
-        src="/assets/uday.jpeg"
+        src={avatarSrc}
         alt="Uday Kiran"
         width={48}
         height={48}

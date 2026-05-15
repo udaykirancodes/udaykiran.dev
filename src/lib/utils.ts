@@ -12,6 +12,13 @@ export const generateOgImageUrl = (title: string, description: string) => {
   return ogImageUrl
 }
 
+export const formatMonthYear = (date: string | Date) => {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+  }).format(new Date(date))
+}
+
 export const generateMetaDataForOg = (componentName: string): Metadata => {
   const component = COMPONENTS.find((c) => c.name === componentName)
   const ogImageUrl = generateOgImageUrl(
@@ -32,12 +39,8 @@ export const generateMetaData = (
 ): Metadata => {
   return {
     metadataBase: new URL(SITE_INFO.url),
-    alternates: {
-      canonical: "/",
-    },
     title: title,
     description: description,
-    keywords: SITE_INFO.keywords,
     authors: [
       {
         name: USER.fullName,
@@ -66,7 +69,6 @@ export const generateMetaData = (
     robots: {
       index: true,
       follow: true,
-      nocache: true,
       googleBot: {
         index: true,
         follow: true,

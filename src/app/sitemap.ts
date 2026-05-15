@@ -1,4 +1,5 @@
 import { COMPONENTS, SITE_INFO } from "@/data"
+import { PROJECTS } from "@/data/projects"
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -27,5 +28,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     })
   )
-  return [...routes, ...componentRoutes]
+
+  const projectRoutes: MetadataRoute.Sitemap = PROJECTS.map((project) => ({
+    url: `${BASE_URL}${project.href}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }))
+
+  return [...routes, ...componentRoutes, ...projectRoutes]
 }

@@ -4,14 +4,21 @@ import { motion } from "motion/react"
 import { useEffect, useState } from "react"
 
 const AnimatedClock = () => {
-  const [time, setTime] = useState(new Date())
+  const [time, setTime] = useState<Date | null>(null)
 
   useEffect(() => {
+    setTime(new Date())
     const interval = setInterval(() => {
       setTime(new Date())
     }, 1000)
     return () => clearInterval(interval)
   }, [])
+
+  if (!time) {
+    return (
+      <div className="flex h-[600px] items-end justify-center overflow-hidden"></div>
+    )
+  }
 
   return (
     <div className="flex h-[600px] items-end justify-center overflow-hidden">

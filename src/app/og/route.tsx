@@ -15,7 +15,7 @@ export async function GET(request: Request) {
           style={{
             position: "relative",
             display: "flex",
-            height: "628px",
+            height: "630px",
             width: "1200px",
             alignItems: "center",
             justifyContent: "center",
@@ -118,7 +118,7 @@ export async function GET(request: Request) {
           </div>
         </div>
       ),
-      { width: 1200, height: 628 }
+      { width: 1200, height: 630 }
     )
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {

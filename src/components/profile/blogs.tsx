@@ -2,8 +2,8 @@
 
 import { Blog, BLOGS } from "@/data"
 import { ArrowRight, CalendarIcon } from "lucide-react"
-import moment from "moment"
 import Link from "next/link"
+import { formatMonthYear } from "@/lib/utils"
 import { SkillBadgeList } from "./experience-item"
 import { HeaderTitle } from "./header-title"
 
@@ -42,7 +42,7 @@ export const SingleBlog: React.FC<{ blog: Blog }> = ({ blog }) => {
           <div className="flex flex-row items-center">
             <CalendarIcon className="text-muted-foreground size-3 sm:size-4" />
             <span className="ml-2 text-[14px]">
-              {moment(blog.date).format("MMM YYYY")}
+              {formatMonthYear(blog.date)}
             </span>
           </div>
           <div>

@@ -2,7 +2,7 @@ import { Separator } from "@/components/profile/separator"
 import { PageHeaderTitle } from "@/components/site/page-header-title"
 import { Button } from "@/components/ui/button"
 import { HireMe } from "@/core/hire-me"
-import { TEXT_TO_ANIMATE } from "@/data"
+import { TEXT_TO_ANIMATE, USER } from "@/data"
 import { COMPONENTS } from "@/data/components"
 import { generateMetaData, generateOgImageUrl } from "@/lib/utils"
 import { Metadata } from "next"
@@ -61,7 +61,7 @@ const Page = () => {
         </div>
       ))}
       <div className="flex-1"></div>
-      <HireMe text={TEXT_TO_ANIMATE} />
+      <HireMe text={TEXT_TO_ANIMATE} avatarSrc={USER.avatar} />
     </>
   )
 }

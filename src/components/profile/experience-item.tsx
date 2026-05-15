@@ -1,5 +1,4 @@
 import { ChevronsDownUpIcon, ChevronsUpDownIcon, Infinity } from "lucide-react"
-import moment from "moment"
 import Image from "next/image"
 
 import {
@@ -8,7 +7,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 import { Experience } from "@/data/experience"
-import { cn } from "@/lib/utils"
+import { cn, formatMonthYear } from "@/lib/utils"
 import { Avatar, AvatarFallback } from "../ui/avatar"
 import { Badge } from "../ui/badge"
 
@@ -79,18 +78,18 @@ export function ExperienceItem({
                     <div className="border-edge border-l-[1px] pl-2">
                       <div className="flex flex-row items-center space-x-2">
                         <p className="text-muted-foreground text-xs">
-                          {moment(experience.from).format("MMM YYYY")}
+                          {formatMonthYear(experience.from)}
                         </p>
                         <span className="text-muted-foreground text-xs">
                           {"-"}
                         </span>
                         {experience.to ? (
                           <p className="text-muted-foreground text-xs">
-                            {moment(experience.to).format("MMM YYYY")}
+                            {formatMonthYear(experience.to)}
                           </p>
                         ) : (
-                          <span className="text-muted-foreground text-xs">
-                            <Infinity className="size-5 text-xs" />
+                          <span className="text-muted-foreground text-xs font-medium">
+                            Present
                           </span>
                         )}
                       </div>

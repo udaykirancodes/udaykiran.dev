@@ -1,6 +1,6 @@
 "use client"
 
-import { Command } from "@/core/command/command"
+import { Command } from "@/core/command"
 import { COMPONENTS } from "@/data/components"
 
 type CommandWrapperProps = {

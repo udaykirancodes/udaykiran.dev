@@ -31,20 +31,20 @@ export const HoldToDeleteButton = ({ onDelete }: { onDelete?: () => void }) => {
     <>
       <Button
         onPointerDown={(e) => {
-          (e.target as HTMLElement).setPointerCapture(e.pointerId);
-          startHold();
+          ;(e.target as HTMLElement).setPointerCapture(e.pointerId)
+          startHold()
         }}
         onPointerUp={(e) => {
-          (e.target as HTMLElement).releasePointerCapture(e.pointerId);
-          cancelHold();
+          ;(e.target as HTMLElement).releasePointerCapture(e.pointerId)
+          cancelHold()
         }}
         onPointerLeave={cancelHold}
         onPointerCancel={cancelHold}
         onBlur={cancelHold}
         onKeyDown={(e) => {
           if (e.key === " ") {
-             e.preventDefault(); 
-             startHold();
+            e.preventDefault()
+            startHold()
           }
         }}
         size={"lg"}
@@ -70,7 +70,9 @@ export const HoldToDeleteButton = ({ onDelete }: { onDelete?: () => void }) => {
             "flex items-center justify-center gap-2 border border-[#FFDBDC] text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
             "absolute top-0 left-0 flex h-full w-full items-center justify-center border-none bg-[#FFDBDC] text-[#E5484D] dark:bg-[#f56f73] dark:text-white",
             "transition-all duration-300 ease-out [clip-path:inset(-1px_100%_-1px_-1px)]",
-            isHolding ? "duration-[2000ms] ease-linear [clip-path:inset(-1px_-1px_-1px_-1px)]" : ""
+            isHolding
+              ? "duration-[2000ms] ease-linear [clip-path:inset(-1px_-1px_-1px_-1px)]"
+              : ""
           )}
         >
           <svg

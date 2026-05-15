@@ -34,7 +34,10 @@ export const SingleProject: React.FC<{ project: Project }> = ({ project }) => {
       <div className="relative z-10 p-3">
         {/* Link */}
         <div className="group flex w-full cursor-pointer flex-col gap-2">
-          <Link href={project.href} className="border-border rounded-[10px] border p-[4px]">
+          <Link
+            href={project.href}
+            className="border-border rounded-[10px] border p-[4px]"
+          >
             <div
               className={cn(
                 "bg-muted border-border relative h-[200px] w-full overflow-hidden rounded-[6px] border select-none sm:h-[170px] md:h-[200px]",
@@ -76,34 +79,34 @@ export const SingleProject: React.FC<{ project: Project }> = ({ project }) => {
           </Link>
           <div className="flex flex-col gap-1 px-2">
             <Link href={project.href}>
-            <div className="flex items-center justify-between">
-              <h3 className="text-primary/95 mb-1 text-sm leading-snug font-medium text-balance sm:text-base">
-                {project.title}
-              </h3>
-              <div className="flex items-center gap-1 select-none">
-                <div className="relative flex items-center justify-center">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-ping bg-green-500 group-hover:hidden"></div>
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth="0"
-                    viewBox="0 0 24 24"
-                    className="relative z-10 text-green-500"
-                    height="14"
-                    width="14"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
-                  </svg>
+              <div className="flex items-center justify-between">
+                <h3 className="text-primary/95 mb-1 text-sm leading-snug font-medium text-balance sm:text-base">
+                  {project.title}
+                </h3>
+                <div className="flex items-center gap-1 select-none">
+                  <div className="relative flex items-center justify-center">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-ping bg-green-500 group-hover:hidden"></div>
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 24 24"
+                      className="relative z-10 text-green-500"
+                      height="14"
+                      width="14"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
+                    </svg>
+                  </div>
+                  <p className="text-muted-foreground text-sm font-medium">
+                    Live
+                  </p>
                 </div>
-                <p className="text-muted-foreground text-sm font-medium">
-                  Live
-                </p>
               </div>
-            </div>
-            <CardDescription className="text-muted-foreground min-h-[40px] text-sm">
-              {project.description}
-            </CardDescription>
+              <CardDescription className="text-muted-foreground min-h-[40px] text-sm">
+                {project.description}
+              </CardDescription>
             </Link>
 
             <div className="flex items-center justify-between gap-1 py-1 select-none">
@@ -142,7 +145,7 @@ export const SingleProject: React.FC<{ project: Project }> = ({ project }) => {
                 <p className="text-foreground text-xs transition-colors duration-300">
                   View Project
                 </p>
-                <ArrowRight className="text-foreground size-3 ml-1 -rotate-45 transition-all duration-300 group-hover:rotate-0 sm:size-4" />
+                <ArrowRight className="text-foreground ml-1 size-3 -rotate-45 transition-all duration-300 group-hover:rotate-0 sm:size-4" />
               </Link>
             </div>
           </div>

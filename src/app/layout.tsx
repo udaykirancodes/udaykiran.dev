@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/providers/theme-provider"
+import { ThemeShortcut } from "@/components/providers/theme-shortcut"
 import { PageViewAnalytics } from "@/components/site/analytics"
 import { Toaster } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
@@ -57,7 +58,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    nocache: true,
     googleBot: {
       index: true,
       follow: true,
@@ -71,8 +71,8 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32" },
-      { url: "/favicon-192x192.png", sizes: "192x192" },
-      { url: "/favicon-512x512.png", sizes: "512x512" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512" },
     ],
     apple: "/apple-touch-icon.png",
   },
@@ -98,6 +98,7 @@ export default function RootLayout({
           >
             {children}
             <Toaster />
+            <ThemeShortcut />
           </ThemeProvider>
         </TooltipProvider>
         {process.env.NODE_ENV !== "development" && (

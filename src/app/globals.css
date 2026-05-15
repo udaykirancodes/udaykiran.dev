@@ -97,7 +97,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --edge: color-mix(in oklab, var(--border) 74%, var(--background));
+  --edge: color-mix(in oklab, var(--border) 85%, var(--background));
 }
 
 .dark {
@@ -139,6 +139,9 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;

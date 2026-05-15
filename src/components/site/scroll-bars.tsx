@@ -9,10 +9,16 @@ const SPREAD = 8 // how many bars the ripple spreads across
 export const AnimatingScrollBars = () => {
   const { scrollYProgress } = useScroll()
 
-  // Wave center: marches from -SPREAD (before first bar) to BAR_COUNT + SPREAD (past last bar)
-  // so every bar gets a turn at being the "active" center across the full scroll range
+  // Single spring for overall scroll to avoid 61 springs
+  const smoothScroll = useSpring(scrollYProgress, {
+    stiffness: 200,
+    damping: 20,
+    bounce: 0,
+  })
+
+  // Wave center: marches from -SPREAD to BAR_COUNT + SPREAD
   const waveCenter = useTransform(
-    scrollYProgress,
+    smoothScroll,
     [0, 1],
     [-SPREAD, BAR_COUNT + SPREAD]
   )
@@ -39,28 +45,27 @@ const Bar = ({
 }) => {
   const isLongerLine = index % 5 === 0
 
-  // Distance of this bar from the moving wave center
-  const distance = useTransform(waveCenter, (center) => index - center)
+  // Base width is 50px for long, 40px for short
+  const baseWidth = isLongerLine ? 50 : 40
+  // Peak width is 100px for long, 80px for short
+  const peakWidth = isLongerLine ? 100 : 80
+  const scalePeak = peakWidth / baseWidth
 
-  const width = useSpring(
-    useTransform(
-      distance,
-      [-SPREAD, 0, SPREAD],
-      isLongerLine ? [50, 100, 50] : [40, 80, 40]
-    ),
-    {
-      bounce: 0,
-      stiffness: 200,
-      damping: 20,
-    }
-  )
+  const scaleX = useTransform(waveCenter, (center) => {
+    const dist = index - center
+    if (dist <= -SPREAD || dist >= SPREAD) return 1
+    // Linear interpolation for scale
+    const progress = 1 - Math.abs(dist) / SPREAD
+    return 1 + (scalePeak - 1) * progress
+  })
 
   return (
     <motion.div
-      style={{ width }}
+      style={{ width: baseWidth, scaleX, transformOrigin: "left" }}
       className={cn(
         "my-1.5 h-px bg-neutral-300 dark:bg-neutral-600",
-        isLongerLine && "bg-neutral-400 dark:bg-neutral-500"
+        isLongerLine && "bg-neutral-400 dark:bg-neutral-500",
+        "will-change-transform"
       )}
     />
   )

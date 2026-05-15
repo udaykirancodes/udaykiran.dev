@@ -3,8 +3,8 @@ export type Experience = {
   title: string
   type: string
   logo: string
-  from: Date
-  to: Date | null
+  from: string
+  to: string | null
   descriptionList: string[]
   skills: string[]
   isExpanded: boolean
@@ -26,7 +26,7 @@ export const EXPERIENCE: Experience[] = [
       "Worked on Golang micro-services backend",
       "Worked on Data Migration Tool with spring boot & spring batch",
     ],
-    from: new Date(2024, 7, 1),
+    from: "2024-08-01",
     to: null,
     type: "Full-time",
     skills: [
@@ -48,8 +48,8 @@ export const EXPERIENCE: Experience[] = [
       "Implemented a Retrieval-Augmented Generation (RAG) based chatbot using TypeScript",
       "Applied Server-Side Rendering (SSR) and Static Site Generation (SSG) in Next.js to enhance SEO and improve page load performance",
     ],
-    from: new Date(2024, 0, 1),
-    to: new Date(2024, 6, 30),
+    from: "2024-01-01",
+    to: "2024-07-30",
     type: "Internship",
     skills: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Framer-Motion"],
   },
@@ -63,8 +63,8 @@ export const EXPERIENCE: Experience[] = [
       "Styled applications using Tailwind CSS for utility-first, responsive design",
       "Built dynamic web applications using Next.js and React",
     ],
-    from: new Date(2023, 4, 1),
-    to: new Date(2023, 5, 30),
+    from: "2023-05-01",
+    to: "2023-06-30",
     type: "Internship",
     skills: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
   },
