@@ -1,8 +1,9 @@
 "use client"
 
 import { useTheme } from "next-themes"
+import { Moon, Sun } from "lucide-react"
 
-const ThemeSwitcher = () => {
+export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme()
 
   const handleClick = () => {
@@ -13,29 +14,15 @@ const ThemeSwitcher = () => {
     }
   }
   return (
-    <div className="flex cursor-pointer items-center">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        onClick={handleClick}
-        className="size-4.5 h-5 w-5 cursor-pointer"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-        <path d="M12 3l0 18"></path>
-        <path d="M12 9l4.65 -4.65"></path>
-        <path d="M12 14.3l7.37 -7.37"></path>
-        <path d="M12 19.6l8.85 -8.85"></path>
-      </svg>
+    <div
+      className="hover:bg-accent/50 flex cursor-pointer items-center justify-center rounded-md p-2 transition-colors"
+      onClick={handleClick}
+    >
+      {theme === "light" ? (
+        <Moon className="size-5" />
+      ) : (
+        <Sun className="size-5" />
+      )}
     </div>
   )
 }
-
-export default ThemeSwitcher

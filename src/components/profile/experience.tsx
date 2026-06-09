@@ -2,7 +2,7 @@ import { EXPERIENCE } from "@/data/experience"
 import { ExperienceItem } from "./experience-item"
 import { HeaderTitle } from "./header-title"
 
-export const Experience: React.FC = () => {
+export function Experience() {
   return (
     <>
       <section className="w-full">

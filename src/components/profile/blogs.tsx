@@ -7,22 +7,22 @@ import { formatMonthYear } from "@/lib/utils"
 import { SkillBadgeList } from "./experience-item"
 import { HeaderTitle } from "./header-title"
 
-export const Blogs: React.FC = () => {
+export function Blogs() {
+  if (!BLOGS.length) return null
+
   return (
-    <>
-      <section className="w-full">
-        <HeaderTitle title="Blogs" />
-        <div className="flex flex-col">
-          {BLOGS.map((blog) => (
-            <SingleBlog key={blog.title} blog={blog} />
-          ))}
-        </div>
-      </section>
-    </>
+    <section id="blogs" className="w-full">
+      <HeaderTitle title="Recent Posts" />
+      <div className="flex w-full flex-col">
+        {BLOGS.map((blog, index) => (
+          <SingleBlog key={index} blog={blog} />
+        ))}
+      </div>
+    </section>
   )
 }
 
-export const SingleBlog: React.FC<{ blog: Blog }> = ({ blog }) => {
+export function SingleBlog({ blog }: { blog: Blog }) {
   return (
     <Link
       href={blog.url}

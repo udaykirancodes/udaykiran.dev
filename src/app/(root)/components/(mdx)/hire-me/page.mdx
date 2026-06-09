@@ -8,15 +8,9 @@ export const metadata = {
 import { getFileContent } from "@/lib/file"
 import { HireMeDemo } from "./hire-me-demo"
 
-<CodeTabs
-  component={
-    <>
-      <HireMeDemo />
-    </>
-  }
-  fileContent={getFileContent(
-    "src/app/(root)/components/(mdx)/hire-me/hire-me-demo.tsx"
-  )}
+<CustomPreviewWithCode
+  component={<HireMeDemo />}
+  filePath="src/app/(root)/components/(mdx)/hire-me/hire-me-demo.tsx"
 />
 
 <Separator />

@@ -1,15 +1,17 @@
 import { cn } from "@/lib/utils"
 
-export const ContainerWrapper = ({
-  children,
-  className,
-}: {
+type ContainerWrapperProps = {
   children: React.ReactNode
   className?: string
-}) => {
+}
+
+export function ContainerWrapper({
+  children,
+  className,
+}: ContainerWrapperProps) {
   return (
-    <div className={cn("mx-auto h-full w-full max-w-4xl", className)}>
-      <div className={cn("border-edge mx-2 h-full border-x-[1px]")}>
+    <div className="mx-auto h-full w-full max-w-5xl px-4">
+      <div className={cn("border-edge h-full border-x-[1px]", className)}>
         {children}
       </div>
     </div>

@@ -6,7 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "../ui/button"
 
-export const ComponentNavigator = () => {
+export function ComponentNavigator() {
   const pathname = usePathname()
 
   const componentName = pathname.split("/").pop()

@@ -7,15 +7,15 @@ type PreviewComponentWithCodeProps = {
   componentName: string
 }
 
-export const PreviewComponentWithCode: React.FC<
-  PreviewComponentWithCodeProps
-> = ({ componentName }) => {
+export async function PreviewComponentWithCode({
+  componentName,
+}: PreviewComponentWithCodeProps) {
   const component = COMPONENTS.find(
     (component) => component.name === componentName
   )
   if (!component) return null
 
-  const fileContent = getFileContent(component.path)
+  const fileContent = await getFileContent(component.path)
 
   const Component = getComponent(componentName)
 

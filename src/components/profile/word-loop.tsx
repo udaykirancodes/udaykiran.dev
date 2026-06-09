@@ -25,12 +25,12 @@ export type WordLoopProps = {
 
 const defaultWordVariants: Variants = {
   initial: { y: 18, opacity: 0, filter: "blur(4px)" },
-  animate: (i: number) => ({
+  animate: () => ({
     y: 0,
     opacity: 1,
     filter: "blur(0px)",
   }),
-  exit: (i: number) => ({
+  exit: () => ({
     y: -18,
     opacity: 0,
     filter: "blur(4px)",

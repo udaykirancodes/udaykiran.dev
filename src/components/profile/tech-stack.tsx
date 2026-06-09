@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Button } from "../ui/button"
 import { HeaderTitle } from "./header-title"
 
-export const TechStack: React.FC = () => {
+export function TechStack() {
   const { theme } = useTheme()
   return (
     <>
@@ -41,8 +41,8 @@ export const TechStack: React.FC = () => {
                   suppressHydrationWarning={true}
                 />
                 <Button
-                  variant={"link"}
-                  className="ml-2 hidden p-0 sm:inline-block"
+                  variant="link"
+                  className="ml-2 inline-block p-0 text-xs sm:text-sm"
                 >
                   {item.title}
                 </Button>

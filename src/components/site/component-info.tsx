@@ -7,13 +7,7 @@ import { usePathname } from "next/navigation"
 import { Button } from "../ui/button"
 import { PageHeaderTitle } from "./page-header-title"
 
-export const BackButton = ({
-  title,
-  href,
-}: {
-  title: string
-  href: string
-}) => {
+export function BackButton({ title, href }: { title: string; href: string }) {
   return (
     <>
       <Link
@@ -41,7 +35,7 @@ export const BackButton = ({
     </>
   )
 }
-export const ShowComponentInfo = () => {
+export function ShowComponentInfo() {
   const pathname = usePathname()
 
   const componentName = pathname.split("/").pop()

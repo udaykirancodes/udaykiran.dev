@@ -1,6 +1,5 @@
-import copy from "copy-to-clipboard"
-
-// copy to clipboard
-export const copyToClipboard = (value: string) => {
-  copy(value)
+export const copyToClipboard = async (value: string) => {
+  if (navigator.clipboard) {
+    await navigator.clipboard.writeText(value)
+  }
 }

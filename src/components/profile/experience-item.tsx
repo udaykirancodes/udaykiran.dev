@@ -1,4 +1,4 @@
-import { ChevronsDownUpIcon, ChevronsUpDownIcon, Infinity } from "lucide-react"
+import { ChevronsDownUpIcon, ChevronsUpDownIcon } from "lucide-react"
 import Image from "next/image"
 
 import {
@@ -131,7 +131,7 @@ export function ExperienceItem({
   )
 }
 
-export const SkillBadgeList = ({ skills }: { skills: string[] }) => {
+export function SkillBadgeList({ skills }: { skills: string[] }) {
   return (
     <ul className="flex flex-wrap gap-1.5">
       {skills.map((skill, index) => (

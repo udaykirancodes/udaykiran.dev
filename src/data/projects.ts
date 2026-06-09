@@ -87,21 +87,4 @@ export const PROJECTS: Project[] = [
       "True client-side unique visitor deduplication tracking",
     ],
   },
-  // {
-  //   title: "udaykiran.dev",
-  //   href: "/projects/udaykiran.dev",
-  //   description: "A minimal responsive portfolio with component registry",
-  //   image: "/assets/portfolio-light.png",
-  //   darkModeImage: "/assets/portfolio-dark.png",
-  //   githubLink: "https://github.com/udaykirancodes/udaykiran.dev",
-  //   liveLink: "https://udaykiran.dev",
-  //   skills: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-  //   descriptionList: [
-  //     "Clean & modern design",
-  //     "Light & Dark theme support",
-  //     "Component registry",
-  //     "Re-Usable components",
-  //     "Shadcn CLI supported",
-  //   ],
-  // },
 ]

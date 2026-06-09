@@ -8,8 +8,17 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const generateOgImageUrl = (title: string, description: string) => {
-  const ogImageUrl = `/og?title=${encodeURI(title)}&description=${encodeURI(description)}`
-  return ogImageUrl
+  return `/og?title=${encodeURI(title)}&description=${encodeURI(description)}`
+}
+
+export const slugify = (text: string) => {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-") // Replace spaces with -
+    .replace(/[^\w-]+/g, "") // Remove all non-word chars
+    .replace(/--+/g, "-") // Replace multiple - with single -
 }
 
 export const formatMonthYear = (date: string | Date) => {

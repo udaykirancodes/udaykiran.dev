@@ -9,6 +9,7 @@ import { CodeCollapsibleWrapper } from "@/components/code/code-wrapper"
 import { CommandWrapper } from "@/components/code/command-wrapper"
 import { CopyFileName } from "@/components/code/copy-file-name"
 import { PreviewComponentWithCode } from "@/components/code/preview-and-code"
+import { CustomPreviewWithCode } from "@/components/code/custom-preview-with-code"
 import { Separator } from "@/components/profile/separator"
 import { PageHeaderTitle } from "@/components/site/page-header-title"
 import {
@@ -44,6 +45,7 @@ const customComponents = {
   AlertDescription,
   Button,
   PreviewComponentWithCode,
+  CustomPreviewWithCode,
   PageHeaderTitle,
   CodeWithFilename,
   CopyFileName,

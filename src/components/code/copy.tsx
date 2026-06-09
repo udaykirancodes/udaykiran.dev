@@ -11,7 +11,7 @@ type CopyCodeProps = {
   position?: "absolute" | "relative"
 }
 
-const CopyCode: React.FC<CopyCodeProps> = ({ code, position = "absolute" }) => {
+export function CopyCode({ code, position = "absolute" }: CopyCodeProps) {
   const [hasCheckIcon, setHasCheckIcon] = useState(false)
 
   const onCopy = () => {
@@ -48,5 +48,3 @@ const CopyCode: React.FC<CopyCodeProps> = ({ code, position = "absolute" }) => {
     </div>
   )
 }
-
-export { CopyCode }

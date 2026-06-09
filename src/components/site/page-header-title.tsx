@@ -5,7 +5,7 @@ type PageHeaderTitle = {
   description: string
 }
 
-const PageHeaderTitle: React.FC<PageHeaderTitle> = ({ title, description }) => {
+export function PageHeaderTitle({ title, description }: PageHeaderTitle) {
   return (
     <>
       <div className="border-edge border-b-[1px] px-2 py-2">
@@ -21,5 +21,3 @@ const PageHeaderTitle: React.FC<PageHeaderTitle> = ({ title, description }) => {
     </>
   )
 }
-
-export { PageHeaderTitle }

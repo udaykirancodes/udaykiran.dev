@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "../ui/button"
 import { ContainerWrapper } from "./container"
 
-export const SiteFooter = () => {
+export function SiteFooter() {
   return (
     <footer className="border-edge w-full border-b-[1px]">
       <ContainerWrapper className="relative">
@@ -11,7 +11,7 @@ export const SiteFooter = () => {
           <div className="text-muted-foreground flex flex-wrap items-center justify-center gap-x-1 text-center font-mono text-xs text-balance sm:px-4">
             Inspired by{" "}
             <Button
-              variant={"link"}
+              variant="link"
               asChild
               className="m-0 p-0 text-xs underline"
             >
@@ -21,7 +21,7 @@ export const SiteFooter = () => {
             </Button>
             <span className="">,</span>
             <Button
-              variant={"link"}
+              variant="link"
               asChild
               className="m-0 p-0 text-xs underline"
             >
@@ -31,7 +31,7 @@ export const SiteFooter = () => {
             </Button>
             <span className="">,</span>
             <Button
-              variant={"link"}
+              variant="link"
               asChild
               className="m-0 p-0 text-xs underline"
             >
@@ -46,7 +46,7 @@ export const SiteFooter = () => {
             Developed by{" "}
             <Button
               asChild
-              variant={"link"}
+              variant="link"
               className="m-0 p-0 text-xs underline"
             >
               <a href="https://github.com/udaykirancodes" target="_blank">

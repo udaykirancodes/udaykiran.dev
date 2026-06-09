@@ -1,4 +1,4 @@
-type TechStack = {
+export type TechStack = {
   key: string
   title: string
   theme?: boolean

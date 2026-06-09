@@ -8,12 +8,12 @@ type CodeWithFilenameProps = {
   collapsible?: boolean
 }
 
-export const CodeWithFilename = ({
+export async function CodeWithFilename({
   fileName,
   showLineNumbers = false,
   collapsible = false,
-}: CodeWithFilenameProps) => {
-  const code = getFileContent(fileName)
+}: CodeWithFilenameProps) {
+  const code = await getFileContent(fileName)
 
   if (collapsible) {
     return (

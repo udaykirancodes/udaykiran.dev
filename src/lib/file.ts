@@ -1,5 +1,10 @@
-import fs from "node:fs"
+import fs from "node:fs/promises"
 
-export const getFileContent = (path: string) => {
-  return fs.readFileSync(path, "utf8")
+export const getFileContent = async (path: string) => {
+  try {
+    return await fs.readFile(path, "utf8")
+  } catch (error) {
+    console.error(`Error reading file ${path}:`, error)
+    return ""
+  }
 }

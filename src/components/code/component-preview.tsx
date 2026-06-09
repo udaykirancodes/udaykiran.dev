@@ -28,12 +28,12 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        "group relative mt-1 flex min-h-96 w-full items-center justify-center rounded-md border-none bg-neutral-100 dark:bg-neutral-900",
+        "group relative mt-1 flex min-h-[60vh] w-full items-center justify-center rounded-md border-none bg-neutral-100 dark:bg-neutral-900",
         className
       )}
     >
       <div className="absolute top-3 right-3">
-        <div className="flex items-center gap-3 opacity-0 transition-opacity group-hover:opacity-100">
+        <div className="flex items-center gap-3 opacity-100 transition-opacity sm:opacity-0 sm:group-hover:opacity-100 sm:focus-within:opacity-100">
           {hasReTrigger && (
             <Tooltip>
               <TooltipTrigger asChild>

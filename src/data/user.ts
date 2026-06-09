@@ -23,9 +23,9 @@ export const USER = {
     },
     {
       name: "X",
-      href: "https://x.com/udaykirandev",
+      href: "https://x.com/udaykirancodes",
       icon: "/assets/x.webp",
-      username: "@udaykirandev",
+      username: "@udaykirancodes",
     },
   ],
 }

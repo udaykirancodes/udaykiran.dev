@@ -51,7 +51,7 @@ const ProjectPage = async ({
         <Card className={cn("group p-2")}>
           <div
             className={cn(
-              "bg-muted border-border relative h-[200px] w-full overflow-hidden rounded-[6px] border select-none sm:h-[400px] md:h-[500px]",
+              "bg-muted border-border relative aspect-video w-full overflow-hidden rounded-[6px] border select-none",
               "bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] transition-all duration-300 [--pattern-foreground:var(--color-edge)]/0 group-hover:[--pattern-foreground:var(--color-border)]/90"
             )}
           >

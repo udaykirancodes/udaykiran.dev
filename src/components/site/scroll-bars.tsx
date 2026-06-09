@@ -6,7 +6,7 @@ import { motion, useScroll, useSpring, useTransform } from "motion/react"
 const BAR_COUNT = 61
 const SPREAD = 8 // how many bars the ripple spreads across
 
-export const AnimatingScrollBars = () => {
+export function AnimatingScrollBars() {
   const { scrollYProgress } = useScroll()
 
   // Single spring for overall scroll to avoid 61 springs

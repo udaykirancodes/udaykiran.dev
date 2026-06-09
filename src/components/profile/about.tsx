@@ -1,7 +1,7 @@
-import { Button } from "../ui/button"
+import { Button } from "@/components/ui/button"
 import { HeaderTitle } from "./header-title"
 
-export const About = () => {
+export function About() {
   return (
     <section className="w-full">
       <HeaderTitle title="About" />

@@ -4,7 +4,7 @@ import { useState } from "react"
 import { CopyCode } from "../code/copy"
 import { TextRoll } from "./text-roll"
 
-export const NPXHolder = () => {
+export function NPXHolder() {
   const [hovered, setHovered] = useState(false)
   return (
     <div className="pointer-events-none absolute top-0 z-50 hidden h-1/2 w-full flex-col items-center justify-center sm:flex">

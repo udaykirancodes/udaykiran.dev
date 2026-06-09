@@ -8,9 +8,9 @@ export const metadata = {
 import { getFileContent } from "@/lib/file"
 import Demo from "./demo"
 
-<CodeTabs
+<CustomPreviewWithCode
   component={<Demo />}
-  fileContent={getFileContent("src/core/hold-to-delete/index.tsx")}
+  filePath="src/core/hold-to-delete/index.tsx"
 />
 
 <Separator />

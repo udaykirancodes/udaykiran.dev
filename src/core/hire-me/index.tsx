@@ -11,9 +11,10 @@ const ANIMATION_REPEAT_DELAY = 1 // seconds
 export type HireMeProps = {
   text: string[]
   avatarSrc: string
+  className?: string
 }
 
-export const HireMe = ({ text, avatarSrc }: HireMeProps) => {
+export const HireMe = ({ text, avatarSrc, className }: HireMeProps) => {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
@@ -28,8 +29,8 @@ export const HireMe = ({ text, avatarSrc }: HireMeProps) => {
   return (
     <motion.div
       className={cn(
-        "fixed right-6 bottom-6 z-50",
-        "hidden items-center gap-x-2 sm:flex"
+        "hidden items-center gap-x-2 sm:flex",
+        className || "fixed right-6 bottom-6 z-50"
       )}
     >
       <div className={cn("flex h-10 items-center justify-center")}>

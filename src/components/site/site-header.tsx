@@ -9,15 +9,15 @@ import { TextRoll } from "../profile/text-roll"
 import { Button } from "../ui/button"
 import { ContainerWrapper } from "./container"
 import MobileNavbar from "./mobile-nav"
-import ThemeSwitcher from "./theme-switcher"
+import { ThemeSwitcher } from "./theme-switcher"
 
-export const SiteHeader = () => {
+export function SiteHeader() {
   const pathname = usePathname()
   const activeUrl = "/" + pathname.split("/")[1]
   return (
-    <header className="border-edge sticky top-0 z-[500] h-12 w-full border-b-[1px] backdrop-blur-xs">
+    <header className="border-edge sticky top-0 z-50 h-12 w-full border-b-[1px] backdrop-blur-xs">
       <ContainerWrapper className="">
-        <nav className="z-100 mx-auto flex h-full w-full items-center justify-between px-2">
+        <nav className="z-50 mx-auto flex h-full w-full items-center justify-between px-2">
           {/* Desktop Nav */}
           <div className="hidden h-full w-full items-center justify-between sm:flex">
             <Link href="/">
