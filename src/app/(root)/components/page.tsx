@@ -6,10 +6,10 @@ import { HireMe } from "@/core/hire-me"
 import { TEXT_TO_ANIMATE, USER } from "@/data"
 import { COMPONENTS } from "@/data/components"
 import { generateMetaData, generateOgImageUrl } from "@/lib/utils"
+import { ArrowRight } from "lucide-react"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 
 import { getComponent } from "@/components/code/component-map"
 import { ComponentPreview } from "@/components/code/component-preview"
@@ -53,7 +53,7 @@ const Page = () => {
               component.className
             )}
           >
-            <div className="bg-background hover:bg-muted/50 peer relative z-1 flex h-full flex-col p-4 transition-colors">
+            <div className="bg-background peer relative z-1 flex h-full flex-col p-4 transition-all duration-300">
               <Link
                 href={component.href}
                 className="absolute inset-0 z-0 focus:outline-none"
@@ -76,7 +76,12 @@ const Page = () => {
                       )}
                     </div>
                   }
-                  className="!mt-0 h-[200px] min-h-[200px] w-full"
+                  className={cn(
+                    "!mt-0 w-full",
+                    component.className.includes("row-span-2")
+                      ? "h-[400px] min-h-[400px]"
+                      : "h-[200px] min-h-[200px]"
+                  )}
                 />
               </div>
               <div className="pointer-events-none relative z-10 mt-4 flex flex-col items-center text-center">

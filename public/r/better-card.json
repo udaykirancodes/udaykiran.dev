@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "better-card",
+  "type": "registry:component",
+  "title": "Better Card",
+  "description": "A flexible card component with header, content, items, footer, and actions layout",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/core/better-card/index.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\n\nexport const BetterCard = ({ className, ...props }: React.ComponentProps<\"div\">) => {\n  return (\n    <div className={cn(className, \"bg-card/60 px-2 py-1 border flex flex-col border-border rounded-xl shadow-xs min-w-xs\")} {...props} />\n  )\n}\n\nexport const BetterCardHeader = ({ className, ...props }: React.ComponentProps<\"div\">) => {\n  return (\n    <div className={cn(\"flex items-center py-1 pt-2 px-1 justify-between gap-x-2\", className)} {...props} />\n  )\n}\n\nexport const BetterCardTitle = ({ className, ...props }: React.ComponentProps<\"h3\">) => {\n  return (\n    <span className={cn(\"text-sm font-normal leading-none tracking-tight\", className)} {...props} />\n  )\n}\n\n\nexport const BetterCardContent = ({ className, ...props }: React.ComponentProps<\"div\">) => {\n  return (\n    <div className={cn(\"flex flex-1 flex-col py-1 gap-y-2 gap-x-2 w-full\", className)} {...props} />\n  )\n}\n\nexport const BetterCardItem = ({ className, ...props }: React.ComponentProps<\"div\">) => {\n  return (\n    <div className={cn(\"text-xs px-2 py-1 h-auto bg-accent rounded-md\", className)} {...props} />\n  )\n}\n\nexport const BetterCardFooter = ({ className, ...props }: React.ComponentProps<\"div\">) => {\n  return (\n    <div className={cn(\"text-xs py-1 h-auto rounded-md\", className)} {...props} />\n  )\n}\n\nexport const BetterCardActions = ({ className, ...props }: React.ComponentProps<\"div\">) => {\n  return (\n    <div className={cn(\"ml-auto flex items-center gap-1 text-muted-foreground\", className)} {...props} />\n  )\n}\n\nexport const BetterCardFooterActions = ({ className, ...props }: React.ComponentProps<\"div\">) => {\n  return (\n    <div className={cn(\"flex items-center flex-row gap-1\", className)} {...props} />\n  )\n}",
+      "type": "registry:component",
+      "target": "src/components/ui/better-card.tsx"
+    }
+  ]
+}

@@ -63,6 +63,20 @@
           "target": "src/components/ui/hold-to-delete.tsx"
         }
       ]
+    },
+    {
+      "name": "better-card",
+      "type": "registry:component",
+      "title": "Better Card",
+      "description": "A flexible card component with header, content, items, footer, and actions layout",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/core/better-card/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/ui/better-card.tsx"
+        }
+      ]
     }
   ]
 }

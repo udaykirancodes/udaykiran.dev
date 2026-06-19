@@ -1,8 +1,9 @@
+import BetterCardDemo from "@/app/(root)/components/(mdx)/better-card/demo"
+import HoldToDeleteDemo from "@/app/(root)/components/(mdx)/hold-to-delete/demo"
 import AnimatedClock from "@/core/animated-clock"
 import { Command } from "@/core/command"
 import { HireMe } from "@/core/hire-me"
 import { TEXT_TO_ANIMATE, USER } from "@/data"
-import HoldToDeleteDemo from "@/app/(root)/components/(mdx)/hold-to-delete/demo"
 
 const sampleCommands = {
   npm: "npm command",
@@ -15,6 +16,11 @@ type ComponentMap = {
 }
 
 export const COMPONENT_MAP: ComponentMap = {
+  "better-card": (
+    <div className="bg-background rounded-md">
+      <BetterCardDemo />
+    </div>
+  ),
   command: (
     <div className="bg-background w-[450px] rounded-md px-1.5">
       <Command commands={sampleCommands} />

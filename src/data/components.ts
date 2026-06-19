@@ -2,6 +2,7 @@ import registryData from "@root/registry.json"
 
 const CUSTOM_LAYOUT: Record<string, string> = {
   "animated-clock": "sm:col-span-2 lg:col-span-2",
+  "better-card": "sm:row-span-2 lg:row-span-2",
 }
 
 export const COMPONENTS = registryData.items

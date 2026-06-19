@@ -1,0 +1,17 @@
+import { getComponentTitle, metadataMap } from "@/lib/og"
+
+export const metadata = {
+  title: getComponentTitle("better-card"),
+  ...metadataMap["better-card"],
+}
+
+<PreviewComponentWithCode
+  componentName="better-card"
+  demoCodePath="src/app/(root)/components/(mdx)/better-card/demo.tsx"
+/>
+
+<Separator />
+
+# Installation
+
+<CommandWrapper componentName={"better-card"} />
