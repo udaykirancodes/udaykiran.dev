@@ -4,7 +4,11 @@
   "type": "registry:component",
   "title": "Command",
   "description": "A switcher for package manager commands with one-click copy",
-  "registryDependencies": ["tooltip", "tabs", "separator"],
+  "registryDependencies": [
+    "tooltip",
+    "tabs",
+    "separator"
+  ],
   "files": [
     {
       "path": "src/core/command/index.tsx",

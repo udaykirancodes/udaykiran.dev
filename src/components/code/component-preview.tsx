@@ -28,7 +28,7 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        "group relative mt-1 flex min-h-[60vh] w-full items-center justify-center rounded-md border-none bg-neutral-100 dark:bg-neutral-900",
+        "group relative mt-1 flex min-h-[60vh] w-full items-center justify-center rounded-xl border-none bg-neutral-100 dark:bg-neutral-900",
         className
       )}
     >
