@@ -28,7 +28,7 @@ export function TechStack() {
             }
             const url = `/assets/tech-stack/${item.key}${getThemeString()}.svg`
             return (
-              <div key={item.key} className="flex flex-col sm:flex-row">
+              <div key={item.key} className="flex items-center justify-center sm:justify-start">
                 <Image
                   src={url}
                   alt={item.title}
@@ -42,7 +42,7 @@ export function TechStack() {
                 />
                 <Button
                   variant="link"
-                  className="ml-2 inline-block p-0 text-xs sm:text-sm"
+                  className="ml-2 hidden p-0 sm:inline-block"
                 >
                   {item.title}
                 </Button>
